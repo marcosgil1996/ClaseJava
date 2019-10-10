@@ -1,6 +1,8 @@
 //Escribe un programa que pida una calificación (entre cero y diez) y visualice su equivalente
 //alfabético, según la siguiente tabla:
 
+//Versión Normal
+
 import java.util.Scanner;
 
 public class Act4Numero {
