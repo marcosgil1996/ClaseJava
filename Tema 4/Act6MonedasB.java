@@ -1,9 +1,3 @@
-/*A una cantidad de dinero indicada, representa con la menor cantidad de monedas posible
- *Ejercicio 6-4
- *@author: Rafa
- *@version: 1
-*/
-
 import java.util.Scanner;
 
 public class Act6Monedas {
@@ -42,7 +36,7 @@ public class Act6Monedas {
         double cantidadUnoCent = 0;
 
 	    System.out.println("Introduce una cantidad de dinero:");
-	    dinero = scan.nextDouble(); //
+	    dinero = scan.nextDouble(); 
 	    scan.reset();
 	
 	    // Se itera, restando la cantidad de cada moneda a dinero y añadiendo una unidad de esa moneda.
