@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MayorOMenor {
+public class Act2MayoOMenor {
     public static void main(String[] args) {
          int n1, n2; //Variables utilizadas para los datos que introduzca el usuario
          Scanner n = new Scanner(System.in);
