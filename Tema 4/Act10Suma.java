@@ -1,7 +1,7 @@
 import java.util.Scanner;
  
 /** 
- * La Multiplicación de dos numeros usando Sumas 
+ * La Multiplicación de dos numeros usando Sumas (Versión positiva)
  */
 
 public class Act10Suma{
@@ -18,10 +18,15 @@ public class Act10Suma{
         numero2 = teclado.nextInt(); // Guardamos el valor del numero
         teclado.nextLine();
 
-        //Se repite la sentencia hasta que se cumpla la condición
+        /*Se repite la sentencia hasta que se cumpla la condición, opción con While
+
         while( numero2 != 0 )  {
             producto = producto + numero1;
             numero2 = numero2 - 1;
+        } */
+
+        for(int i = numero1; i <= numero1; i--){
+            producto = producto + numero2;
         }
 
         System.out.println("El producto entre los numeros introducidos es: " + producto ); //Se enseña el resultado
