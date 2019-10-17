@@ -20,10 +20,11 @@ public class Act13Tablas {
                         System.out.println(n + " * " + i + " = " + n*i);
                 }
             }else{
-                System.out.print("Introduce un número entero entre el 1 y el 10: ");
+                System.out.print("Introduce un número entero entre el 1 y el 10 ");
+
             }
         }while (!validado);
-        
+
         teclado.close(); //Se cierra el teclado
     }
 }
