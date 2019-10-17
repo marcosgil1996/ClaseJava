@@ -8,13 +8,15 @@ import java.util.Scanner;
 
 public class Act14Multiplo{
    public static void main(String[] args) {
-        Scanner teclado  = new Scanner(String.in);
+        Scanner teclado  = new Scanner(System.in); //Declaramos el scanner
         int base, exponente;
 
-        System.println("Introduce la base de la potencia");
-        base = teclado.nextLine();
-        System.println("Introduce la exponente de la potencia");
-        exponente = teclado.nextLine();
+        System.out.println("Introduce la base de la potencia"); //Pedimos la base de la potencia
+        base = teclado.nextInt();
+        teclado.nextLine();
+        System.out.println("Introduce la exponente de la potencia"); //Pedimos el exponente de la potencia
+        exponente = teclado.nextInt();
+        teclado.nextLine();
 
         double potencia = 1;
         
@@ -32,7 +34,8 @@ public class Act14Multiplo{
         }
         potencia = 1/potencia;
         }
-
         System.out.println(base + "^" + exponente + " = " + potencia);
+        
+        teclado.close(); // Nota: siempre cerrar el teclado
     }
 }
