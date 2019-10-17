@@ -8,7 +8,7 @@ public class Act13Tablas {
         Scanner teclado = new Scanner(System.in); //Escaner 
         int n; //Variable que introduce el usuario
 
-        System.out.print("Introduce un número entero: ");
+        System.out.print("Introduce un número entero: "); //Se pide un valor
         n = teclado.nextInt();
         
         System.out.println("Tabla del " + n);
