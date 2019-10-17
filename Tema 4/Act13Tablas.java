@@ -7,15 +7,23 @@ public class Act13Tablas {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in); //Escaner 
         int n; //Variable que introduce el usuario
+        boolean validado;
 
-        System.out.print("Introduce un número entero: "); //Se pide un valor
-        n = teclado.nextInt();
+        do{
+            System.out.print("Introduce un número entero: "); //Se pide un valor
+            n = teclado.nextInt();
+            validado = n >= 1 && n <= 10;
         
-        System.out.println("Tabla del " + n);
-       
-        for(int i = 1; i<=10; i++){
-             System.out.println(n + " * " + i + " = " + n*i);
-        }
+            if(validado){
+                for(int i = 1; i<=10; i++){
+                        System.out.println("Tabla del " + n);
+                        System.out.println(n + " * " + i + " = " + n*i);
+                }
+            }else{
+                System.out.print("Introduce un número entero entre el 1 y el 10: ");
+            }
+        }while (!validado);
+        
         teclado.close(); //Se cierra el teclado
     }
 }
