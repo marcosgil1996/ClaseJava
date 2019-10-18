@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 //** Incompleto **/
 
-public class Act6Moneda {
+public class Act06Moneda {
      public static void main(String[] args) {
          Scanner teclado = new Scanner (System.in);
 
