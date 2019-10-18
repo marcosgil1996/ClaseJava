@@ -17,7 +17,7 @@ public class Act18Negativo{
     System.out.println("Vaya introduciendo números, (puede parar introduciendo un número negativo):");
 
     while (numeroIntroducido >= 0) {
-      numeroIntroducido = teclado.nextLine();
+      numeroIntroducido = Double.parseDouble(System.console().readLine());
       numeros++;
       suma += numeroIntroducido;
       System.out.println("Introduzca un numero");
