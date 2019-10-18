@@ -22,7 +22,7 @@ public class Act18Negativo{
       suma += numeroIntroducido;
       System.out.println("Introduzca un numero");
     }
-    
+
     System.out.println("La media de los números  introducidos es: " + (suma - numeroIntroducido)/ (numeros - 1));
     teclado.close();
   }
