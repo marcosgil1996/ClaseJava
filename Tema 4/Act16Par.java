@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @author SergiSvk
  */
 
- public class Act15Par{
+ public class Act16Par{
      public static void main(String[] args) {
          Scanner teclado = new Scanner(System.in);
          int numero;
@@ -14,16 +14,29 @@ import java.util.Scanner;
          numero=teclado.nextInt();
          teclado.nextLine();
 
+         
          boolean primo = true;
-         for(int i = 2; i<n; i++){
+         
+         /* OPCIÓN B    
+         for(int i = 2; i<numero; i++){
              if((numero%i)==0){
                  primo = false;
+                 break;
                 }
              }
+         */
+        while(primo && i < numero){
+             if(numero%1==0){
+                 primo = false;
+                 }
+                i++;
+             }
          if(primo){
-             System.out.println("El numero" + n + "es primo");
+             System.out.println("El numero" + numero + "es primo");
          }else{
-             System.out.println("El numero" + n + "no es primo");
+             System.out.println("El numero" + numero + "no es primo");
          }
-     }
- }
+         teclado.close();
+    }
+     
+}
