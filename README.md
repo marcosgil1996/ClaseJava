@@ -16,7 +16,7 @@ Próximamente
 ```
 
 ## Preguntas/sugerencias/Bug Reports
-** Por favor leea [Suggested/Planned Features List](https://github.com/jagrosh/MusicBot/projects/1) antes de sugerir cualquiera características **. Si deseas, recomendarme más opciones, or report bugs, abré un [Issue](https://github.com/jagrosh/MusicBot/issues) en este repositorio, o entra en [mi Discord Server](https://discord.gg/0p9LSGoRLu6Pet0k). (Nota: no aceptaré ninguna solicitud de función que requiera claves API adicionales).
+** Por favor leea [Suggested/Planned Features List](https://github.com/jagrosh/MusicBot/projects/1) antes de sugerir cualquiera características **. Si deseas, recomendarme más opciones, or report bugs, abré un [Issue](https://github.com/SergiSvK/ClaseJava/issues) en este repositorio, o entra en [mi Discord Server](https://discord.gg/0p9LSGoRLu6Pet0k). (Nota: no aceptaré ninguna solicitud de función que requiera claves API adicionales).
 
 ## Ejemplos
 ![Example](https://i.imgur.com/RuS4kky.png)
