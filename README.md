@@ -1,6 +1,6 @@
 <img align="right" src="https://i.blogs.es/6091fa/java/1366_2000.jpg" height="200" width="200">
 
-[![Release](https://img.shields.io/github/release/jagrosh/MusicBot.svg)](https://github.com/jagrosh/MusicBot/releases/latest)
+[![Release](https://img.shields.io/github/release/jagrosh/MusicBot.svg)]()
 [![Discord](https://discordapp.com/api/guilds/147698382092238848/widget.png)](https://discord.gg/UDhdXjW)<br>
 ## Ejercicios Java Clase
 
