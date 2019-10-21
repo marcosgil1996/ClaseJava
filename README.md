@@ -20,6 +20,6 @@ Próximamente
 ![Example](https://i.imgur.com/RuS4kky.png)
 
 ## Bibliografía
-* [Fundamentos de programción](https://docs.google.com/file/d/0Byy7aUl9u4fBdnZjVnZOampmTjA/edit) / Facultad de informática Universidad Comtense de Madrid
+* [Fundamentos de programción](https://docs.google.com/file/d/0Byy7aUl9u4fBdnZjVnZOampmTjA/edit) / Facultad de informática Universidad Computense de Madrid
 * [Programación con Java](https://docs.google.com/file/d/0Byy7aUl9u4fBRnJwc1U5Vkdnalk/edit)
 * [Aprender java con ejercicios](https://leanpub.com/aprendejava) / Página oficial 
