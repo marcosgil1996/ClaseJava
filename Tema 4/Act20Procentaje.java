@@ -31,7 +31,6 @@ public class Ejer20Porcentaje {
             if (moneda == 1) {
             cara++;
             }
-
             else
             cruz++;
         }
