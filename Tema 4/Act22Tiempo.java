@@ -2,29 +2,28 @@ import java.util.Scanner;
 
 public class Act22Tiempo {
 	public static void main(String arg[]) {
-        int hour, minute, seconds, number;   // variables que vamos a necesitar
+        int hour;   // variables que vamos a necesitar
         Scanner teclado = new Scanner (System.in); //Scaner lectura
-        double valido = false;
-        valido = numero <=23;
+        boolean valido;
+        
         
         do{
             System.out.print( "Introduce una hora" ); // número insertado en horas hasta un máx de 24h
-            number = teclado.nextInt(); //numero introducido
-            
             teclado.nextLine();
+            hour = teclado.nextInt(); //numero introducido
+            valido = hour<=23;
             
-            if(valido){
-                System.out.print("Hora establecida de manera correcta");
-            }else{
-                System.out.print("Introduce una hora valida");
+            
+            if(!valido){
+                System.out.print("Establezca una hora correcta");
+                system.print.nextLine();
+            }else(valido){
+                System.out.print("hora correcta");
+                system.print.nextLine();
             }
+        }while (valido);
 
-        }while (!valido);
-    
-		
-
-		
-		System.out.println(" El valor introducido como");
+		System.out.println(" El valor introducido como " + hour+ " es correcto");
 		teclado.close();
 	}
 }
