@@ -1,7 +1,7 @@
 import java.util.Scanner;//Importamos el escáner.
 
 
-public class Act22{
+public class Act22Tiempo{
     public static void main(String[] args) {
         int horas;//Variable que almacena las horas introducidas.
         int minutos;//Variable que almacena los minutos introducidos.
