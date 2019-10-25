@@ -7,11 +7,12 @@ public class Act01 {
 
     public static void main(String[] args) {
         double numero;
-        Scanner teclado = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in); 
 
         System.out.println("Escribe un numero natural");
         numero = teclado.nextDouble();
 
+        //%.2f se escribe entre comillas
         System.out.printf("El numero introducido redondeados a 2 decimales %.2f ", numero);
         teclado.close();
         
