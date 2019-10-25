@@ -21,7 +21,7 @@ public class Practica{
             opcion = teclado.nextInt();
             teclado.nextLine();
             
-            switch (opción) {
+            switch (opcion) {
                 case 0:
                     break;
                 case 1: //Suma
@@ -85,7 +85,9 @@ public class Practica{
                 
             }
 
+
         }
+    
         
     }
 }
