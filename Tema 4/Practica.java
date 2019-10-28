@@ -34,6 +34,7 @@ public class Practica{
                     resultado = primerNumero + segundoNumero;
                     System.out.println("El resultado es: " + resultado);
                     resultado = 0;
+                    
                     break;
                 case 2:
                     System.out.println("Has saleccionado Restar: \n Introduce el primer numero numero a restar");
@@ -85,7 +86,7 @@ public class Practica{
                 
             }
 
-
+            
         }
     
         
