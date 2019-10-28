@@ -9,7 +9,7 @@ public class Practica{
         double resultado;
 
         //Invocamos el scanner
-        Scanner teclado = new Scanner(system.in);
+        Scanner teclado = new Scanner(System.in);
         
         while (!salir) {
             
@@ -87,6 +87,7 @@ public class Practica{
 
 
         }
+        teclado.close();
     
         
     }
