@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Act5",
+            "request": "launch",
+            "mainClass": "Act5"
+        }
+    ]
+}
