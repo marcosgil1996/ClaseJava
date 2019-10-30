@@ -10,6 +10,7 @@ public class Act5 {
         for(int i =1; i<=9;i++){
             s = s + i;
             System.out.printf("\u001B[0;3"+n+"m%9s \n", s);
+            n = n%8;
             n++;
 
         }
