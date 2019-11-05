@@ -71,7 +71,8 @@ public class Act9 {
         System.out.println("Introduce la velocidad del viento");
         viento = Integer.parseInt(lector.nextLine());
         
-        //Velocidad
+        //Probalidad de lluvia 0-100%
+        
 
     
         
