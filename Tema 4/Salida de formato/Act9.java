@@ -87,33 +87,38 @@ public class Act9{
             }
         }while(segundos<0||segundos>59);
 
-        //Velocidad del viento
+        //Velocidad del viento- se pide al usuario
         System.out.print("Introduce la velocidad en Km/h del viento: ");
         velocidadViento = teclado.nextInt();
         teclado.nextLine();
 
-        //Temperatura
+        //Temperatura - ºC
         System.out.print("Introduce la temperatura en Cº: ");
         temperatura = teclado.nextDouble();
         teclado.nextLine();
 
+        //hPa
         System.out.print("Indica la presión atmosférica en hPa: ");
         presionAtmosferica = teclado.nextDouble();
         teclado.nextLine();
 
+        //lluvia- en %
         System.out.print("Indica la probabilidad de lluvia con un número entero: ");
         probabilidadLluvia = teclado.nextInt();
         teclado.nextLine();
 
-        System.out.print("Indica el índice de radayción ultravioleta con un número entero: ");
+        //UV
+        System.out.print("Indica el índice de radiacción ultravioleta con un número entero: ");
         indiceRadaycionUV = teclado.nextInt();
         teclado.nextLine();
 
+        //RESULTADOS
         System.out.printf("\u001B[1;36;44m **  DATOS ESTACIÓN METEREOLÓGICA  ** \u001B[0m\n");
         System.out.printf("Ciudad:\t\t\t%s", ciudad);
         System.out.printf("\nFecha:\t\t\t%02d/%02d/%04d", day, mes, anyo);
         System.out.printf("\nHora de la mesura:\t%02d:%02d:%02d", hour, minute, segundos);
 
+        //Varia el color depende de los números introduccidos
         if(velocidadViento<30){
             System.out.printf("\nVelocidad viento:\t\u001B[0;32m%d\u001B[0m km/h", velocidadViento);
         } else if(velocidadViento>=30&&velocidadViento<=60){
@@ -152,6 +157,6 @@ public class Act9{
         } else if(indiceRadaycionUV>10){
             System.out.printf("\nUVI:\t\t\t\u001B[0;35m%d\u001B[0m\n",indiceRadaycionUV);
         }
-        teclado.close();
+        teclado.close(); //cerramos el teclado
     }
 }
