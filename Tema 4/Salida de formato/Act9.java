@@ -2,81 +2,156 @@
  * Act9 un programa para representar los datos de una estación meteorológica. 
  */
 import java.util.Scanner;
-
-public class Act9 {
-
+public class Act9{
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in); // Declaramos el scanner
+
+        //Ciudad
+        String ciudad = "";
+        //Fechas
+        int day, mes, anyo;
+        //Horas
+        int hour, minute, segundos;
+        int velocidadViento;
+        double temperatura;
+        double presionAtmosferica;
+        int probabilidadLluvia;
+        int indiceRadaycionUV;
+
+        System.out.print("Indica la ciudad: "); //El usuario introduce el dado de la ciudad
+        ciudad = teclado.nextLine();
         
-        Scanner lector = new Scanner (System.in);//Declaramos el escáner.
+        //do-while para comprobar los datos introducidos por los usuarios son correctos
 
-        //Presión en hPa
-        float presion;
-        //Probalidad de lluvia 0-100%
-        float lluvia = 0;
-        //UVI, entero
-        float uvi = 0;
+        //FECHAS
 
-        //CIUDAD//
-        String ciudad;
-        System.out.println("Introduce la ciudad en la que se ecuentre");
-        ciudad = Integer.parseInt(lector.nextLine());
-
-        // PARTE DE LA HORAS //
-        
-        int horas;//Variable que almacena las horas introducidas.
-        int minutos;//Variable que almacena los minutos introducidos.
-        int segundos;//Variable que almacena los segundos.
-        boolean horasOK = false;//Variable booleana que almacenará si el número está bien o no.
-        boolean minutosOK = false;//Variable booleana que almacenará si el número está bien o no.
-        boolean segundosOK = false;//Variable booleana que almacenará si el número está bien o no.
-        
-
-
-        System.out.println("Introduce el número en segundos:  ");//Pedimos por primera vez los segundos.
-        segundos = Integer.parseInt(lector.nextLine());//Leemos los segundos.
-        System.out.println("Introduce el número de minutos: ");//Pedimos por primera vez los minutos.
-        minutos = Integer.parseInt(lector.nextLine());//Leemos los minutos.
-        System.out.println("Introduce el número de horas: ");//Pedimos por primera vez las horas.
-        horas = Integer.parseInt(lector.nextLine());//Leemos las horas.
-
-
-        //Hacemos un bucle while, mientras que horasOK, minutosOK o segundosOK sean false el bucle se
-        //seguirá haciendo, aunque gracias al condicional no volverá a pedir la fecha si ya se ha 
-        //introducido correctamennte anteriorment. Mostrar → 03:14:04
-        
-        while (!horasOK || !minutosOK || !segundosOK){
-            if (segundos > 60 || segundos < 0){
-                System.out.println("Te has equivocado! Introduce un número en segundos: ");
-                segundos = Integer.parseInt(lector.nextLine());
-            }else{
-                segundosOK = true;
+        //Comprobación para dias
+        do{
+            System.out.print("Introduce el dia en el que te encuentres: ");
+            day = teclado.nextInt();
+            teclado.nextLine();
+            if(day<=0||day>31){
+                System.out.println("El día introducido no es valido, entre 0-31: ");
             }
-        
-            if (minutos > 60 || minutos < 0){
-                System.out.println("Te has equivocado! Introduce el número de minutos: ");
-                minutos = Integer.parseInt(lector.nextLine());
-            }else {
-                minutosOK = true;
+        }while(day<=0||day>31);
+
+        //Comprobación para el mes
+        do{
+            System.out.print("Introduce un mes en número: ");
+            mes = teclado.nextInt();
+            teclado.nextLine();
+            if(mes<=0||mes>12){
+                System.out.println("El mes introducido no es valido, entre 1-12");
             }
-            if (horas > 24 || horas < 0){
-                System.out.println("Te has equivocado! Introduce el número de horas: ");
-                horas = Integer.parseInt(lector.nextLine());
-            }else{
-                horasOK = true;
+        }while(mes<=0||mes>12);
+
+        //Comprobación para el año
+        do{
+            System.out.print("Introduce un año: ");
+            anyo = teclado.nextInt();
+            teclado.nextLine();
+            if(anyo<=0||anyo>9999){
+                System.out.println("El año introducido no es valido.");
             }
+        }while(anyo<=0||anyo>9999);
+
+        //LINIA TEMPORAL HORA:MINUTOS:SEGUNDOS
+
+        //Comprobación para la hora
+        do{
+            System.out.print("Introduce una hora: ");
+            hour = teclado.nextInt();
+            teclado.nextLine();
+            if(hour<0||hour>23){
+                System.out.println("La hora introducida no es valida.");
+            }
+        }while(hour<0||hour>23);
+
+        //Comprobación para los minutos
+        do{
+            System.out.print("Introduce unos minutos: ");
+            minute = teclado.nextInt();
+            teclado.nextLine();
+            if(minute<0||minute>59){
+                System.out.println("Los minute introducidos no son validos.");
+            }
+        }while(minute<0||minute>59);
+
+        //Comprobación para los segundos
+        do{
+            System.out.print("Introduce unos segundos: ");
+            segundos = teclado.nextInt();
+            teclado.nextLine();
+            if(segundos<0||segundos>59){
+                System.out.println("Los segundos introducidos no son validos.");
+            }
+        }while(segundos<0||segundos>59);
+
+        //Velocidad del viento
+        System.out.print("Introduce la velocidad en Km/h del viento: ");
+        velocidadViento = teclado.nextInt();
+        teclado.nextLine();
+
+        //Temperatura
+        System.out.print("Introduce la temperatura en Cº: ");
+        temperatura = teclado.nextDouble();
+        teclado.nextLine();
+
+        System.out.print("Indica la presión atmosférica en hPa: ");
+        presionAtmosferica = teclado.nextDouble();
+        teclado.nextLine();
+
+        System.out.print("Indica la probabilidad de lluvia con un número entero: ");
+        probabilidadLluvia = teclado.nextInt();
+        teclado.nextLine();
+
+        System.out.print("Indica el índice de radayción ultravioleta con un número entero: ");
+        indiceRadaycionUV = teclado.nextInt();
+        teclado.nextLine();
+
+        System.out.printf("\u001B[1;36;44m **  DATOS ESTACIÓN METEREOLÓGICA  ** \u001B[0m\n");
+        System.out.printf("Ciudad:\t\t\t%s", ciudad);
+        System.out.printf("\nFecha:\t\t\t%02d/%02d/%04d", day, mes, anyo);
+        System.out.printf("\nHora de la mesura:\t%02d:%02d:%02d", hour, minute, segundos);
+
+        if(velocidadViento<30){
+            System.out.printf("\nVelocidad viento:\t\u001B[0;32m%d\u001B[0m km/h", velocidadViento);
+        } else if(velocidadViento>=30&&velocidadViento<=60){
+            System.out.printf("\nVelocidad viento:\t\u001B[0;33m%d\u001B[0m km/h", velocidadViento);
+        } else if(velocidadViento>60){
+            System.out.printf("\nVelocidad viento:\t\u001B[0;31m%d\u001B[0m km/h", velocidadViento);
         }
 
-        //Velocidad del viento//
-        float viento = 0;
-        System.out.println("Introduce la velocidad del viento");
-        viento = Integer.parseInt(lector.nextLine());
-        
-        //Probalidad de lluvia 0-100%
-        
+        if(temperatura<22){
+            System.out.printf("\nTemperatura:\t\t\u001B[0;34m%.2f\u001B[0m Cº", temperatura);
+        } else if(temperatura>=22&&temperatura<=27){
+            System.out.printf("\nTemperatura:\t\t\u001B[0;32m%.2f\u001B[0m Cº", temperatura);
+        } else if(temperatura>27&&temperatura<=35){
+            System.out.printf("\nTemperatura:\t\t\u001B[0;33m%.2f\u001B[0m Cº", temperatura);
+        } else if(temperatura>35){
+            System.out.printf("\nTemperatura:\t\t\u001B[0;31m%.2f\u001B[0m Cº", temperatura);
+        }
 
-    
-        
-    
+        System.out.printf("\nPresión atmosférica:\t%.1f hPa", presionAtmosferica);
+
+        if(probabilidadLluvia<35){
+            System.out.printf("\nProbabilidad lluvia:\t\u001B[0;32m%d\u001B[0m %%", probabilidadLluvia);
+        } else if(probabilidadLluvia>=35&&probabilidadLluvia<=70){
+            System.out.printf("\nProbabilidad lluvia:\t\u001B[0;33m%d\u001B[0m %%", probabilidadLluvia);
+        } else if(probabilidadLluvia>70){
+            System.out.printf("\nProbabilidad lluvia:\t\u001B[0;31m%d\u001B[0m %%", probabilidadLluvia);
+        }
+        if(indiceRadaycionUV<=2){
+            System.out.printf("\nUVI:\t\t\t\u001B[0;32m%d\u001B[0m\n",indiceRadaycionUV);
+        } else if(indiceRadaycionUV>=3&&indiceRadaycionUV<=5){
+            System.out.printf("\nUVI:\t\t\t\u001B[0;34m%d\u001B[0m\n",indiceRadaycionUV);
+        } else if(indiceRadaycionUV>=6&&indiceRadaycionUV<=7){
+            System.out.printf("\nUVI:\t\t\t\u001B[0;33m%d\u001B[0m\n",indiceRadaycionUV);
+        } else if(indiceRadaycionUV>=8&&indiceRadaycionUV<=10){
+            System.out.printf("\nUVI:\t\t\t\u001B[0;31m%d\u001B[0m\n",indiceRadaycionUV);
+        } else if(indiceRadaycionUV>10){
+            System.out.printf("\nUVI:\t\t\t\u001B[0;35m%d\u001B[0m\n",indiceRadaycionUV);
+        }
+        teclado.close();
     }
-        
 }
