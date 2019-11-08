@@ -20,7 +20,12 @@ public class Act3 {
         teclado.close();
 
     }
-    
+    /**
+     * 
+     * @param x
+     * @param y
+     * @return
+     */
     public static double maximo( double x, double y) {
         if (x>=b) {
             return x;
