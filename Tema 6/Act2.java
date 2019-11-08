@@ -10,10 +10,24 @@ public class Act2 {
         
         Scanner teclado = new Scanner(System.in);
         
-        Math PI;   
-        System.out.println("Area de la circunferencia: ");
-        
-
+        double radio;
+        double area, logitud;
+        System.out.print("Radio: ");
+        r = teclado.nextInt();
+        a = area(radio);
+        l = lontigud(radio);
+        System.out.println("El area de una circunferencia de radio" + radio + "es " + area);
+  
        teclado.close();
+    }
+
+    
+    public static double lontigud(double radio) {
+        return 2* Math.PI;
+        
+    }
+    public static double area(double radio) {
+        return 2* Math.PI* radio;
+        
     }
 }
