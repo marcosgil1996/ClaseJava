@@ -21,7 +21,11 @@ public class Act2 {
        teclado.close();
     }
 
-    
+    /**
+     * 
+     * @param radio
+     * @return
+     */
     public static double lontigud(double radio) {
         return 2* Math.PI;
         
