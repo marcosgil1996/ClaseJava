@@ -12,22 +12,19 @@ public class Act05 {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Introduce a character: ");
+        System.out.print("Introduce el caracter: ");
         character = scan.next().charAt(0);
-        System.out.print("Introduce the number of times(Interger): ");
+        System.out.print("Introduce el numero de veces que se va a repetir: ");
         numberTimes = scan.nextInt();
         printChar(character, numberTimes);
         scan.close();
     }
 
-    
     /**
      * Salidas a la pantalla de caracteres un número
      * @param character
      * @param numberTimes
      */
-
-
     public static void printChar(char character, int numberTimes){
 
         for(int x = 0; x < numberTimes; x++){
