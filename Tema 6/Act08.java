@@ -10,10 +10,10 @@ public class Act08 {
 
     public static void main(String Args[]) {
 
-        int firstNumber = 0;
-        int secondNumber = 0;
-        int thirdNumber = 0;
-        int fourthNumber = 0;
+        int firstNumber = 0; //Primer número
+        int secondNumber = 0; //Primer número
+        int thirdNumber = 0; //Primer número
+        int fourthNumber = 0; //Primer números
         boolean capicuaR= false; //Resultado
         
         Scanner teclado = new Scanner(System.in);
@@ -32,7 +32,7 @@ public class Act08 {
         teclado.nextLine();
 
 
-        System.out.print("** RESULTADO **): ");
+        System.out.print("** RESULTADO ** ");
         capicuaR = capicua(firstNumber, secondNumber, thirdNumber, fourthNumber);
 
         if (capicuaR == true){
@@ -53,18 +53,17 @@ public class Act08 {
 
     public static boolean capicua(int first, int second, int third, int fourth){
 
-        boolean firstAndSecond = false;
-        boolean thirdAndFourth = false;
+        boolean firstAndFourth = false;
+        boolean secondAndThird = false;
         
-        if (first == second){
-            firstAndSecond = true;
+        if (first == fourth){
+            firstAndFourth = true;
         }
 
-        if (third == fourth) {
-            thirdAndFourth = true;
+        if (second == third) {
+            secondAndThird = true;
         }
-
-        if (firstAndSecond && thirdAndFourth == true) {
+        if (firstAndFourth && secondAndThird == true) {
             return true;
         } else{
             return false;
