@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Act05",
+            "request": "launch",
+            "mainClass": "Act05",
+            "projectName": "Tema 6_ac6564f5"
+        }
+    ]
+}
