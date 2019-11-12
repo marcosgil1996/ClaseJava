@@ -4,7 +4,7 @@
  */
 import java.util.Scanner;
 
-public class Act2 {
+public class Act02 {
 
     public static void main(String[] args) {
         
