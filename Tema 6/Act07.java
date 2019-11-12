@@ -5,14 +5,33 @@ import java.util.Scanner;
  */
 public class Act07 {
 
-    public static void main(String[] args) {
-        Scanner lector = new Scanner(System.in);
-        int num;
-        System.out.println("Intriduce el número del cual quieras calcualar el factorial");
+    public static void main(String Args[]) {
 
+        int factorialNumber = 0;
+        
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Introduce the number to n!(interger): ");
+        factorialNumber = scan.nextInt();
+        scan.nextLine();
+        System.out.println("The n! of " + factorialNumber + " is: " + factorial(factorialNumber));
+        scan.close();
     }
-    public static int factorial(int a) {
-        int b = 1;
-        for(int i = a;i>)
+
+    
+    /**
+     * Calculo de factorial
+     * @param factorial
+     * @return int
+     */
+
+
+    public static int factorial(int factorial){
+
+        for(int i = factorial; i > 0; i--){
+            factorial = factorial * i;
+        }
+
+        return factorial;
     }
-}
+} 
