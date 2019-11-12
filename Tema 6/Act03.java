@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Act3 Escribe un método que devuelva el mayor de dos números
  */
-public class Act3 {
+public class Act03 {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
