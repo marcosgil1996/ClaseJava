@@ -12,11 +12,11 @@ public class Act02 {
         
         
         double radio;
-        double area, longitud;
+        double area, longn;
         System.out.print("Radio: ");
         radio = teclado.nextInt();
         area = area(radio);
-        longitud = lontigud(radio);
+        longn = longitud(radio);
         System.out.println("El area de una circunferencia de radio" + radio + "es " + area);
   
        teclado.close();
@@ -26,7 +26,7 @@ public class Act02 {
      * @param radio
      * @return
      */
-    public static double lontigud(double radio) {
+    public static double longitud(double radio) {
         return 2* Math.PI;
         
     }
