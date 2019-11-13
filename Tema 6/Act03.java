@@ -16,7 +16,7 @@ public class Act03 {
         n = teclado.nextInt();
         teclado.nextLine();
 
-        System.out.println("El máximo entre" + l +" y "+ n + " es " + maximo(x, y));
+        System.out.println("El máximo entre" + l +" y "+ n + " es " + maximo(l, n));
         teclado.close();
 
     }
@@ -27,7 +27,7 @@ public class Act03 {
      * @return
      */
     public static double maximo( double x, double y) {
-        if (x>=b) {
+        if (x>=y) {
             return x;
             
         } else{
