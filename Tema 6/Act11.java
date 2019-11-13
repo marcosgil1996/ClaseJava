@@ -8,19 +8,22 @@ public class Act11 {
         final int NUMERO_PARTIDOS = 16;
         System.out.println("=== QUINELA ===");
         printQuimiela(NUMERO_PARTIDOS);
+        System.out.println("=== === === ===");
+      
+           
     }
 
 
     /**
-     * 
+     * Método para generar un número aleatorio entre un valor min y un máximo pasados como parámetro. 
      * @param randomNumber
-     * @return
+     * @return un número aleatorio
      */
     public static int randomNumber(int randomNumber){
         
-        Random rnd = new Random();
+        Random rnd = new Random(); //Invocamos la clase ramdom
         randomNumber = rnd.nextInt(3 - 1 + 1) + 1;
-        return randomNumber;
+        return randomNumber; //Retorno de carga de ramdomNumber
 
     }
 
@@ -28,7 +31,7 @@ public class Act11 {
     /**
      * 
      * @param partidos
-     * @return 
+     * @return la impresión de la quinela
      */
 
 
