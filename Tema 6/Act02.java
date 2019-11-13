@@ -10,17 +10,17 @@ public class Act02 {
         
         Scanner teclado = new Scanner(System.in);
         
+        
         double radio;
-        double area, logitud;
+        double area, longitud;
         System.out.print("Radio: ");
-        r = teclado.nextInt();
-        a = area(radio);
-        l = lontigud(radio);
+        radio = teclado.nextInt();
+        area = area(radio);
+        longitud = lontigud(radio);
         System.out.println("El area de una circunferencia de radio" + radio + "es " + area);
   
        teclado.close();
     }
-
     /**
      * 
      * @param radio
