@@ -19,11 +19,11 @@ public class Act11 {
      * @param randomNumber
      * @return un número aleatorio
      */
-    public static int randomNumber(int randomNumber){
+    public static int randomNumber(int min, int max){
         
         Random rnd = new Random(); //Invocamos la clase ramdom
-        randomNumber = rnd.nextInt(3 - 1 + 1) + 1;
-        return randomNumber; //Retorno de carga de ramdomNumber
+        return rnd.nextInt(max - min + 1) + min;
+
 
     }
 
@@ -42,7 +42,7 @@ public class Act11 {
         String empate = "X";
 
         for(int i = 1; i < partidos; i++){
-            numeroAle = randomNumber(numeroAle);
+            numeroAle = randomNumber(1,3);
             if (numeroAle == 3){
                 System.out.printf("%-5s%-2d%5s\n",tab,i, empate);
                 
