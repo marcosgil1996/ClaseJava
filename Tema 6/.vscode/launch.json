@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Act12",
+            "request": "launch",
+            "mainClass": "Act12",
+            "projectName": "Tema 6_ac6564f5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Practica",
+            "request": "launch",
+            "mainClass": "Practica",
+            "projectName": "Tema 6_ac6564f5"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Act02",
             "request": "launch",
             "mainClass": "Act02",
