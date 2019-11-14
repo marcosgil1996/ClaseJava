@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Act13",
+            "request": "launch",
+            "mainClass": "Act13",
+            "projectName": "Tema 6_ac6564f5"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Act12",
             "request": "launch",
             "mainClass": "Act12",
