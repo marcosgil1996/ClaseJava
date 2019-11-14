@@ -12,10 +12,10 @@ public class Act12 {
         System.out.println("=== === === ===");
         
     }
-    public static int randomNumber(Float min, Float max){
+    public static float randomNumber(Float min, Float max){
         
         Random rnd = new Random(); //Invocamos la clase ramdom
-        return rnd.nextFloat(max - min + 1) + min;
+        return min + rnd.nextFloat()*(max-min);
     }
     public static void getImpresion(int usuarios){
        
@@ -31,8 +31,6 @@ public class Act12 {
 
     public static void getNotas(int Notas) {
         
-        if (0>5){
-            
-        }
+    
     }
 }
