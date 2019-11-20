@@ -11,7 +11,7 @@ public class Act18{
         numDNI = teclado.nextInt();
         System.out.printf("La letra que corresponde a " + numDNI +" es: "+ getCalcularNIF(numDNI));
         teclado.close();
-   }
+     }
 
    /**
     * 
@@ -22,7 +22,7 @@ public class Act18{
         String caracteres="TRWAGMYFPDXBNJZSQVHLCKE";
         int resto = dni%23;
         return caracteres.charAt(resto);
-   }
+     }
    /**
     * 
     * @param dni
@@ -32,5 +32,5 @@ public class Act18{
         char caracteres[] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
         int resto = dni%23;
         return caracteres[resto];
-   }
+     }
 }
