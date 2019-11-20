@@ -5,19 +5,12 @@ import java.util.Scanner;
  */
 public class Act20 {
     public static void main(String[] args) {
-        java.util.Scanner Leer = new java.util.Scanner(System.in);
-
-	Scanner entrada = new Scanner(System.in);
-
- 
-
+	    Scanner entrada = new Scanner(System.in);
         int dia, mes, anho;
 
         int resultado;
 
         String fecha;
-
-        int suma;
 
 
 
@@ -31,7 +24,7 @@ public class Act20 {
 
         anho = Integer.parseInt(fecha.substring(6,10));
 
-        resultado=dia + mes + anho;
+        resultado = dia + mes + anho;
 
 
 
@@ -41,10 +34,9 @@ public class Act20 {
 
             fechaIncorrecta = (anho > 9999) || (dia < 1 || dia > 31) || (mes < 1 || mes > 12);
 
-                if (fechaIncorrecta)
-
-                    System.out.println("La fecha introducida no es correcta");
-
+            if (fechaIncorrecta){
+                System.out.println("La fecha introducida no es correcta");
+            }
         }
 
         while (fechaIncorrecta);
@@ -64,7 +56,7 @@ public class Act20 {
 
 
         System.out.println("Numero de la suerte: " + resultado);
-        Leer.close();
+        entrada.close();
 
 	}
 }
