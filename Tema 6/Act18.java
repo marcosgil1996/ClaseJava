@@ -13,12 +13,21 @@ public class Act18{
         teclado.close();
    }
 
+   /**
+    * 
+    * @param dni
+    * @return
+    */
    public static char getCalcularNIF(int dni){
         String caracteres="TRWAGMYFPDXBNJZSQVHLCKE";
         int resto = dni%23;
         return caracteres.charAt(resto);
    }
-
+   /**
+    * 
+    * @param dni
+    * @return caracteres [resto]
+    */
    public static char getCalcularNIFArray(int dni){
         char caracteres[] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
         int resto = dni%23;
