@@ -1,10 +1,9 @@
-import java.util.Scanner;
 
 /**
  * Act17 un progrma que solicite dos números enteros (ancho y alto)
  */
 public class Act17 {
-
+/*
     public static void main(String[] args) {
         char c;
         int lineas,columnas;
@@ -28,5 +27,5 @@ public class Act17 {
            System.out.print(c);
        }
    }
-
+   */
 }
