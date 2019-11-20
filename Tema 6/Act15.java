@@ -33,7 +33,7 @@ public class Act15 {
                     break;
             
                 case 2:
-                    System.out.println("Has selecccionado la opción de lectura más corta" + getpalabraCorta());
+                    System.out.println("Has selecccionado la opción de lectura más corta");
                     break;
                 case 3:
                     System.out.println("Has seleccionado la opción de numero de vocales");
