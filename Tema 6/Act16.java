@@ -1,8 +1,10 @@
+
 import java.util.Scanner;
 
 /**
  * Act16
  */
+/*
 public class Act16 {
 
     public static void main(String[] args) {
@@ -22,3 +24,4 @@ public class Act16 {
         
     }
 }
+*/
