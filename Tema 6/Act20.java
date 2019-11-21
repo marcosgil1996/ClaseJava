@@ -49,10 +49,7 @@ public class Act20 {
 
             resultado = resultado / 10 + resultado % 10;
 
-        }
-
-        while(resultado > 10);
-
+        }while(resultado > 10);
 
 
         System.out.println("Numero de la suerte: " + resultado);
