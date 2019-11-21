@@ -15,15 +15,10 @@ public class Act20 {
 
 
         System.out.print("Introduce fecha de tu nacimiento: ");
-
         fecha = entrada.nextLine();
-
         dia = Integer.parseInt(fecha.substring(0,2));
-
         mes = Integer.parseInt(fecha.substring(3,5));
-
         anho = Integer.parseInt(fecha.substring(6,10));
-
         resultado = dia + mes + anho;
 
 
