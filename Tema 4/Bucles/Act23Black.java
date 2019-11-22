@@ -141,7 +141,8 @@ public class Act23Black {
 
 			resultadoOrdenador = 0;
 
-		} while(cicloJuego);
+        } while(cicloJuego);
+        scan.close();
 	}
 }
 
