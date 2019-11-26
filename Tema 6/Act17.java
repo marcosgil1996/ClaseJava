@@ -2,30 +2,28 @@
 /**
  * Act17 un progrma que solicite dos números enteros (ancho y alto)
  */
+import java.util.Scanner;
 public class Act17 {
-/*
-    public static void main(String[] args) {
-        char c;
-        int lineas,columnas;
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Ingresa la largaría del rectangulo (numero): ");
-        lineas = Integer.parseInt(teclado.nextLine());
-        System.out.println("Ingresa el alto del rectangulo (numero): ");
-        columnas = Integer.parseInt(teclado.nextLine());
-        teclado.close();
-    }
-   public  void getRectangulo(int lineas, int columnas, String caracter) {
-       for (i =0; i < lineas; i++){
-           getimprimir(columnas, caracter);
-           
-       }
-       
+   public static void main(String[] args) {
+        Scanner lector = new Scanner(System.in);
+        char letra;
+        int alto, ancho;
+        System.out.println("*** RECTÁNGULO ***");
+        System.out.print("Indica la letra: ");
+        letra = lector.nextLine().charAt(0);
+        System.out.print("Ancho: ");
+        ancho = Integer.parseInt(lector.nextLine());
+        System.out.print("Alto: ");
+        alto = Integer.parseInt(lector.nextLine());
+        rectangulo(ancho, alto, letra);
+        lector.close();
    }
-
-   public void  getimprimir(int nveces, char c){
-       for(int i =0; i<nveces; i++){
-           System.out.print(c);
-       }
+   public static void rectangulo(int ancho, int alto, char c) {
+      for(int i = 1; i <= alto; i++) {
+         for(int j = 1; j <= ancho; j++) {
+            System.out.print(c);   
+         }
+         System.out.println();
+      }   
    }
-   */
 }
