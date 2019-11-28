@@ -12,6 +12,27 @@ public class Ejercicio16 {
       imprimir(n,c);
    }
 
+<<<<<<< HEAD
+=======
+
+/**
+ * Act16
+ */
+import java.util.Scanner;
+public class Act16 {
+   public static Scanner lector = new Scanner(System.in);
+   public static void main(String[] args) {
+      int n;
+      char c;
+      System.out.println("*** CONTADOR DE 4 DÍGITOS ***");
+      System.out.print("Indica el número a sustituir: ");
+      n = Integer.parseInt(lector.nextLine());
+      System.out.print("Indica el carácter de sustitución: ");
+      c = lector.nextLine().charAt(0);
+      imprimir(n,c);
+   }
+
+>>>>>>> aaab977ab08220d4bf7c5709695051ea1bc47894
    public static void imprimir(int num, char c) {
       char ci, cj, ck, cl;
       for(int i = 0; i <= 9; i++) {
