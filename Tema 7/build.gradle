@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'ejercicios'
@@ -9,6 +10,13 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+application {
+    mainClassName = "Main"
+}
+
+run {
+    standardInput = System.in
 }
 
 dependencies {
