@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Act02{
 
     public static void getAct02(String[] args) {
-        // Metodo scanner para introducir datos desde la consola
+        // Metodo scanner
         Scanner in = new Scanner(System.in);
         //Declaramos variables
         String texto;
@@ -13,7 +13,7 @@ public class Act02{
         int vocal_o = 0;
         int vocal_u = 0;
 
-        System.out.println("introduzca un texto");
+        System.out.println("Introduzca un texto");
         //metodo que obtiene los datos ingresados
         texto = in.nextLine();
         for (int i=0; i<texto.length(); i++){
@@ -21,19 +21,16 @@ public class Act02{
         }
         for (int i=0; i < texto.length(); i++){
             //Condición que evalua la cadena ingresada
-            if((texto.charAt(i)=='a')||(texto.charAt(i)=='e')||
-                    (texto.charAt(i)=='i')||(texto.charAt(i)=='o')||
+            if((texto.charAt(i)=='a')||(texto.charAt(i)=='e')|| (texto.charAt(i)=='i')||(texto.charAt(i)=='o')||
                     (texto.charAt(i)=='u')){
                 contador2++;
             }
             if(texto.charAt(i)=='a'){
                 vocal_a++;
             }
-
             if(texto.charAt(i)=='e'){
                 vocal_e++;
             }
-
             if(texto.charAt(i)=='i'){
                 vocal_i++;
             }
@@ -54,6 +51,8 @@ public class Act02{
         System.out.println(vocal_i + " i " );
         System.out.println(vocal_o + " o " );
         System.out.println(vocal_u + " u " );
+        System.out.println(consonantes + " Consonantes " );
+        in.close(); //cierre del teclado
     }
 }
 
