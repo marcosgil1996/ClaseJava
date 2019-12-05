@@ -6,7 +6,7 @@ public class Act02{
         Scanner in = new Scanner(System.in);
         //Declaramos variables
         String texto;
-        int contador1 = 0, contador2 = 0,consonantes,espacio = 0, guion = 0, punto = 0, coma = 0;
+        int contador1 = 0, contador2 = 0,consonantes;
         int vocal_a = 0;
         int vocal_e = 0;
         int vocal_i = 0;
@@ -26,19 +26,6 @@ public class Act02{
                     (texto.charAt(i)=='u')){
                 contador2++;
             }
-            if(texto.charAt(i)==' '){
-                espacio++;
-            }
-            if(texto.charAt(i)=='-'){
-                guion++;
-            }
-            if(texto.charAt(i)=='.'){
-                punto++;
-            }
-            if(texto.charAt(i)==','){
-                coma++;
-            }
-
             if(texto.charAt(i)=='a'){
                 vocal_a++;
             }
@@ -59,7 +46,7 @@ public class Act02{
         }
         //Resta de las variables contador
 
-        consonantes = contador1-contador2-espacio-guion-punto-coma;
+        consonantes = contador1-contador2;
         System.out.println(contador1 + " Caracteres " );
         System.out.println(contador2 + " Vocales " );
         System.out.println(vocal_a + " a " );
@@ -67,12 +54,6 @@ public class Act02{
         System.out.println(vocal_i + " i " );
         System.out.println(vocal_o + " o " );
         System.out.println(vocal_u + " u " );
-        System.out.println(consonantes + " Consonantes " );
-        System.out.println(espacio + " Espacios " );
-        System.out.println(guion + " Guiones " );
-        System.out.println(punto + " Puntos " );
-        System.out.println(coma + " Comas " );
-
     }
 }
 
