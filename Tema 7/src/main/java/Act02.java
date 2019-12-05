@@ -29,16 +29,6 @@ public class Act02{
             if(texto.charAt(i)==' '){
                 espacio++;
             }
-            if(texto.charAt(i)=='-'){
-                guion++;
-            }
-            if(texto.charAt(i)=='.'){
-                punto++;
-            }
-            if(texto.charAt(i)==','){
-                coma++;
-            }
-
             if(texto.charAt(i)=='a'){
                 vocal_a++;
             }
@@ -68,10 +58,6 @@ public class Act02{
         System.out.println(vocal_o + " o " );
         System.out.println(vocal_u + " u " );
         System.out.println(consonantes + " Consonantes " );
-        System.out.println(espacio + " Espacios " );
-        System.out.println(guion + " Guiones " );
-        System.out.println(punto + " Puntos " );
-        System.out.println(coma + " Comas " );
 
     }
 }
