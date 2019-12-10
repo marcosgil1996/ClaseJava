@@ -5,7 +5,8 @@ public class Main {
         //Act03 eje2b = new Act03();
         //Act04 eje4b = new Act04();
         //Act05 eje5b = new Act05();
-        Act06 eje6b = new Act06();
+        //Act06 eje6b = new Act06();
+        Act07 eje7b = new Act07();
 
 
     }
