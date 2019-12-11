@@ -1,0 +1,2 @@
+public class Act12 {
+}
