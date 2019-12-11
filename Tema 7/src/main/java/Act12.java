@@ -8,10 +8,23 @@ public class Act12 {
         frase = teclado.nextLine();
         frase = frase.trim();
         frase = frase.toLowerCase();
-        frase = frase.replaceD
+        frase = Digits(frase);
+        frase  = Words(frase);
+        teclado.close();
+
     }
-    public static String replaceDigits(String sentece){
+
+    /**
+     *
+     * @param sentece
+     * @return
+     */
+    public static String Digits(String sentece){
         sentece = sentece.replace("\\d", "*");
         return sentece;
+    }
+    public static  String Words(String sentence){
+        sentence = sentence.replaceAll("es","nopor");
+        return  sentence;
     }
 }
