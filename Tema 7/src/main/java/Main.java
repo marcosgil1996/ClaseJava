@@ -9,7 +9,7 @@ public class Main {
         //Act07 eje7b = new Act07(); Mayor logitud
         //Act08 eje8b = new Act08(); Dos columnas
         //Act09 eje9b = new Act09(); Solo posiciones impares
-        // Act10 eje10b  = new Act10(); Palindroma
+        // Act10 eje10b  = new Act10(); Palindromo
         //Act11 eje11b = new Act11();
         Act12 eje12b = new Act12();
 
