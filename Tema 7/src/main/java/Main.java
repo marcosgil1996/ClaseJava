@@ -11,7 +11,8 @@ public class Main {
         //Act09 eje9b = new Act09(); Solo posiciones impares
         // Act10 eje10b  = new Act10(); Palindromo
         //Act11 eje11b = new Act11();
-        Act12 eje12b = new Act12();
+        //Act12 eje12b = new Act12();
+        Act13 eje13 = new Act13();
 
     }
 }
