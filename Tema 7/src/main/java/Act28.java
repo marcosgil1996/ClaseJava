@@ -1,16 +1,16 @@
-/**
+/*
  *
- * @author
- * @version
+ * @author Sergi
+ * @version 1.1
  */
 
 
 import java.util.Random;
 
 
-public class Ejercicio28 {
+public class Act28 {
 
-    public Ejercicio28(){
+    public Act28(){
 
         char[] randomChars = new char[500];
 
@@ -50,8 +50,8 @@ public class Ejercicio28 {
 
         int[] numChars = new int[26]; // Stores the counter of every char
 
-        for(int i = 0; i < randomChars.length; i++){
-            switch(randomChars[i]){
+        for (char randomChar : randomChars) {
+            switch (randomChar) {
                 case 'A':
                     numChars[0]++;
                     break;
