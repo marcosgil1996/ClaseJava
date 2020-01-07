@@ -1,5 +1,5 @@
-/**
- * Creates an array of 10 numeric elements and copies the elements that are >10 no a new Array
+/*
+ *
  * @author
  * @version
  */
@@ -23,7 +23,7 @@ public class Act22 {
         S = copyArray(P,S);
 
         /*
-        Outputs to screen the results
+        Muentras de resultados
          */
         System.out.print("FIRST ARRAY: ");
         System.out.println(Arrays.toString(P));
@@ -35,7 +35,7 @@ public class Act22 {
 
 
     /**
-     * Fills a numeric array of 10 elements
+     * Rellena el Array con 10 elementos
      * @param numbers
      * @return
      */

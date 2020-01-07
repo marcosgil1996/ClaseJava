@@ -17,32 +17,32 @@ public class Act21 {
 
     public Act21(){
 
-        int[] numbers = new int[10]; // Array declaration and init
+        int[] numbers = new int[10]; // Array declara y inicia
 
         menu(numbers);
     }
 
 
     /**
-     * Main menu to call other methods
-     * @param vector ñe
+     * El principio del menú de la llamada de los otros métodos
+     * @param vector parametros
      */
 
     public static void menu(int[] vector){
 
-        boolean validate = false; // Controls the flow of the menu loop
+        boolean validate = false; // Controla el flujo del bucle del menú.
         int userInput = 0;
 
         do {
-            System.out.println("MAIN MENU");
+            System.out.println("MENU PRINCIPAL");
             System.out.println("------------");
-            System.out.println("1.FILL ARRAY");
-            System.out.println("2.DISPLAY ARRAY CONTENT");
-            System.out.println("3.DISPLAY EVEN POSITIONS");
-            System.out.println("4.DISPLAY MULTIPLE OF 3 POSITIONS");
+            System.out.println("1.RELLENAR ARRAY");
+            System.out.println("2.VISUALIZAR CONTENIDO DE ARRAY");
+            System.out.println("3.VISUALIZAR CONTENIDO PAR");
+            System.out.println("4.VISUALIZAR CONTENIDO MÚLTIMO DE 3");
             System.out.println("0.EXIT");
             System.out.println("--------------------");
-            System.out.println("SELECT OPTION: ");
+            System.out.println("SELECCIONA UNA OPINIÓN: ");
 
             userInput = scan.nextInt();
             scan.nextLine();

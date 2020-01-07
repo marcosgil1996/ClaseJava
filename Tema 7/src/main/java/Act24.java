@@ -18,10 +18,10 @@ public class Act24 {
         fillArray(V);
         copyArray(V, P);
 
-        System.out.print("FIRST ARRAY: ");
+        System.out.print("PRIMER ARRAY: ");
         System.out.println(Arrays.toString(V));
         System.out.println("");
-        System.out.print("SECOND ARRAY: ");
+        System.out.print("SEGUNDO ARRAY: ");
         System.out.println(Arrays.toString(P));
         System.out.println("");
 

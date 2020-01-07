@@ -26,7 +26,7 @@ public class Main {
         Act26 eje26 = new Act26();
         Act27 eje27 = new Act27();
         Act28 eje28 = new Act28();
-        Act29 eje = new Act29();
+        Act29 eje29 = new Act29();
 
     }
 }

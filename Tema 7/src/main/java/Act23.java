@@ -20,7 +20,7 @@ public class Act23 {
         /*
         Outputs to screen the results
          */
-        System.out.print("FIRST ARRAY: ");
+        System.out.print("PRIMER ARRAY: ");
         System.out.println(Arrays.toString(V));
         System.out.println("");
         System.out.print("REVERSE ARRAY: ");
