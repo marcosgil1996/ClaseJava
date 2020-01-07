@@ -4,38 +4,36 @@
  * @version
  */
 
-
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 
-public class Ejercicio26 {
+public class Act26 {
 
     static Scanner scan = new Scanner(System.in);
 
 
-    public Ejercicio26(){
+    public Act26(){
 
         int[][] matrix = new int[4][8];
         menu(matrix);
     }
 
     /**
-     * Main menu to call other methods
+     * Principal con llamada a otros métodos
      * @param
      */
 
     public static void menu(int[][] matrix){
 
-        boolean validate = false; // Controls the flow of the menu loop
+        boolean validate = false; // Panel de control
         int userInput = 0;
 
         do {
             System.out.println("MENU");
             System.out.println("----------------------------------------");
-            System.out.println("1.FILL ARRAY WITH RANDOM INTEGERS");
-            System.out.println("2.DISPLAY MATRIX");
+            System.out.println("1. TODA LA MATRIZ");
+            System.out.println("2.MATRIZ TRASPUESTA");
             System.out.println("3.DISPLAY TRANSPOSED MATRIX"); //Fix
             System.out.println("4.DISPLAY ROWS WITH TOTAL");
             System.out.println("5.DISPLAY MAX AND MIN VALUE");
@@ -43,10 +41,10 @@ public class Ejercicio26 {
             System.out.println("7.DISPLAY [N][N] ELEMENT");
             System.out.println("8.DISPLAY [ROW] ELEMENT");
             System.out.println("9 DISPLAY [COL] ELEMENT.");
-            System.out.println("10.Guarda en la columna 8 el total de todas las anteriores."); // Fix
-            System.out.println("0.EXIT");
+            System.out.println("10.Guarda en la columna 8 el total de todas las anteriores."); //
+            System.out.println("0. SALIDA");
             System.out.println("-----------------------------------------");
-            System.out.println("SELECT OPTION: ");
+            System.out.println("SELECCIONA LA OPCIÓN: ");
 
             userInput = scan.nextInt();
             scan.nextLine();

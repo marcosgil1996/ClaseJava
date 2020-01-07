@@ -12,17 +12,17 @@ public class Act24 {
 
     public Act24(){
 
-        int[] V = new int[50];
-        int[] P = new int[50];
+        int[] v = new int[50];
+        int[] p = new int[50];
 
-        fillArray(V);
-        copyArray(V, P);
+        fillArray(v);
+        copyArray(v, p);
 
         System.out.print("PRIMER ARRAY: ");
-        System.out.println(Arrays.toString(V));
+        System.out.println(Arrays.toString(v));
         System.out.println("");
         System.out.print("SEGUNDO ARRAY: ");
-        System.out.println(Arrays.toString(P));
+        System.out.println(Arrays.toString(p));
         System.out.println("");
 
     }
