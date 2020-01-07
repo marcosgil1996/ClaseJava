@@ -16,7 +16,17 @@ public class Main {
         //Act14 eje14 = new Act14();
         //Act15 eje15 = new Act15();
         //Act18 eje18 = new Act18();
-        Act19 eje19 = new Act19();
+        //Act19 eje19 = new Act19();
+        //Act20 eje20 = new Act20();
+        //Act21 eje21 = new Act21();
+        //Act22 eje22 = new Act22();
+        //Act23 eje23 = new Act23();
+        //Act24 eje24 = new Act24();
+        //Act25 eje25 = new Act25();
+        Act26 eje26 = new Act26();
+        Act27 eje27 = new Act27();
+        Act28 eje28 = new Act28();
+        Act29 eje = new Act29();
 
     }
 }
