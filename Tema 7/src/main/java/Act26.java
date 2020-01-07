@@ -34,7 +34,7 @@ public class Act26 {
             System.out.println("----------------------------------------");
             System.out.println("1. TODA LA MATRIZ");
             System.out.println("2.MATRIZ TRASPUESTA");
-            System.out.println("3.DISPLAY TRANSPOSED MATRIX"); //Fix
+            System.out.println("3.DISPLAY MATRIZ TRANSPUESTA"); //Fix
             System.out.println("4.DISPLAY ROWS WITH TOTAL");
             System.out.println("5.DISPLAY MAX AND MIN VALUE");
             System.out.println("6.DISPLAY MATRIX MEAN"); // Fix
@@ -138,15 +138,6 @@ public class Act26 {
 
         int[][] matrixTransposed = new int[8][4];
 
-        /*
-        System.out.println("NUMBER OF ROWS? (DEFAULT 3)");
-        rows = scan.nextInt();
-        scan.nextLine();
-        System.out.println("NUMBER OF COLS? (DEFAULT 7)");
-        cols = scan.nextInt();
-        scan.nextLine();
-        matrixTransposed = new int[rows][cols];
-        */
 
         for(int i = 0; i < matrixTransposed.length; i++){
             for(int j = 0; j < matrixTransposed[i].length; j++){
@@ -320,8 +311,8 @@ public class Act26 {
 
         System.out.print("COL " + col + ": ");
 
-        for(int i = 0; i < matrix.length; i++) {
-            System.out.print(matrix[i][col] + "\t");
+        for (int[] ints : matrix) {
+            System.out.print(ints[col] + "\t");
         }
         System.out.println("");
     }
