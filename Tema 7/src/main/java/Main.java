@@ -12,7 +12,10 @@ public class Main {
         // Act10 eje10b  = new Act10(); Palindromo
         //Act11 eje11b = new Act11();
         //Act12 eje12b = new Act12();
-        Act13 eje13 = new Act13();
+        //Act13 eje13 = new Act13();
+        //Act14 eje14 = new Act14();
+        Act15 eje15 = new Act15();
+        Act18 eje18 = new Act18();
 
     }
 }
