@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Act13 {
 
@@ -17,7 +17,7 @@ public class Act13 {
     static int getnumero( int[] media){
         int numero =0;
 
-        return media;
+
     }
 
 
