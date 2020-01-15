@@ -11,6 +11,9 @@ public class Asignatura {
         codigo = 0;
     }
 
+    /*
+     *
+     */
     public Asignatura(String nombre, int codigo,String curso){
         this.nombre = nombre;
         this.codigo = codigo;
