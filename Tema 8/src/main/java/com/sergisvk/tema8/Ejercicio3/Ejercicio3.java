@@ -49,7 +49,7 @@ public class Ejercicio3 {
                     validar = true;
             }
 
-        }while (validar == true);
+        }while (validar);
     }
 
     /**
@@ -67,22 +67,24 @@ public class Ejercicio3 {
 
         opcion = teclado.nextInt();
         teclado.nextLine();
-        switch (opcion){
-            case 1:
-                System.out.println("Buscando las consultas por GRUPO . . ."); //llamada al método del grupo
-                break;
-            case 2:
-                System.out.println("Buscando las consultas por EDAD . . ."); //llamda al método de edad
-                break;
-            case 3:
-                System.out.println("Buscando las consultas por NIA . . ."); //llamada al método de Consultas de NIA
-                break;
-            case 4:
-                System.out.println("Buscando consultas por Apellidos . . ."); //llamada al método de consultas por Apellidos
-            default:
+        do {
+            switch (opcion){
+                case 1:
+                    System.out.println("Buscando las consultas por GRUPO . . ."); //llamada al método del grupo
+                    break;
+                case 2:
+                    System.out.println("Buscando las consultas por EDAD . . ."); //llamda al método de edad
+                    break;
+                case 3:
+                    System.out.println("Buscando las consultas por NIA . . ."); //llamada al método de Consultas de NIA
+                    break;
+                case 4:
+                    System.out.println("Buscando consultas por Apellidos . . ."); //llamada al método de consultas por Apellidos
+                default:
 
 
-        }
+            }
+        }while (validar);
 
     }
 
