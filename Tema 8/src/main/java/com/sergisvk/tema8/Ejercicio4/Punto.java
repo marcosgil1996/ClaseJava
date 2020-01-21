@@ -4,7 +4,7 @@ public class Punto {
     public double getX() {
         return x;
     }
-
+    
     private double x;
     private double y;
 
@@ -24,6 +24,7 @@ public class Punto {
     public void setX(double x) {
         this.x = x;
     }
+
 
     public double getY() {
         return y;
