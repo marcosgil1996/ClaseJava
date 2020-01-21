@@ -6,8 +6,6 @@ public class Ejercicio4 {
         Punto p2 = new Punto(6,2);
     }
 
-    public static void calcularDistancia(double punto){
 
-    }
 
 }

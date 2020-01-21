@@ -18,6 +18,9 @@ public class Punto {
         y = 0;
     }
 
+    public static void calcularDistancia(double punto){
+
+    }
     public void setX(double x) {
         this.x = x;
     }
