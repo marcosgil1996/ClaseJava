@@ -1,21 +1,24 @@
 package com.sergisvk.tema8.Ejercicio6;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Bici {
-    private String marca;
+
     private String referencia;
     private boolean motor;
+    private  String modelo;
+    private float tamanyo;
     private int anyo;
     private float pulgadas;
+    private int stock;
+    private GregorianCalendar fechaFabricacion;
 
     public Bici(int referencia, String marca, int precio, double pesoKg, double pulgadas){
-        this.referencia = "A0000";
-        this.marca = "Unknown";
-        this.motor = false;
-        this.anyo = Calendar.getInstance().get(Calendar.YEAR);
+
 
     }
+    private String marca;
 
     public String getMarca() {
         return marca;
@@ -41,6 +44,22 @@ public class Bici {
         this.motor = motor;
     }
 
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public float getTamanyo() {
+        return tamanyo;
+    }
+
+    public void setTamanyo(float tamanyo) {
+        this.tamanyo = tamanyo;
+    }
+
     public int getAnyo() {
         return anyo;
     }
@@ -56,6 +75,26 @@ public class Bici {
     public void setPulgadas(float pulgadas) {
         this.pulgadas = pulgadas;
     }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public GregorianCalendar getFechaFabricacion() {
+        return fechaFabricacion;
+    }
+
+    public void setFechaFabricacion(GregorianCalendar fechaFabricacion) {
+        this.fechaFabricacion = fechaFabricacion;
+    }
+
+
+
+
 }
 
 

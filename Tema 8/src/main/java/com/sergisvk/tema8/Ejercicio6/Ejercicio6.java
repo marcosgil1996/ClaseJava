@@ -191,7 +191,7 @@ public class Ejercicio6 {
         } while (opcion < 0 || opcion > 3);
         return opcion;
     }
-    private int menuConsultas() {
+    private void menuConsultas() {
         int opcion = -1;
         do {
             Lib.limpiarPantalla();
@@ -205,11 +205,10 @@ public class Ejercicio6 {
             System.out.println("0. Volver al menú principal\n");
             System.out.println("Elija una opción: ");
             opcion = Integer.parseInt(lector.nextLine());
-            if(opcion < 0 || opcion > 5) {
+            if(opcion < 0 || opcion > 3) {
                 System.out.println("Elija una opción del menú [0-3]");
                 Lib.pausa();
             }
-        } while (opcion < 0 || opcion > 5);
-        return opcion;
+        } while (opcion < 0 || opcion > 3;
     }
 }
