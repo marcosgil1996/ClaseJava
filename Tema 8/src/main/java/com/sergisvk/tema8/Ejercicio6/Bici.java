@@ -4,12 +4,12 @@ import java.util.Calendar;
 
 public class Bici {
     private String marca;
-    private String referencia; //Clave Principal
+    private String referencia;
     private boolean motor;
     private int anyo;
     private float pulgadas;
 
-    public Bici(){
+    public Bici(int referencia, String marca, int precio, double pesoKg, double pulgadas){
         this.referencia = "A0000";
         this.marca = "Unknown";
         this.motor = false;
