@@ -1,5 +1,4 @@
 package com.sergisvk.tema8;
-
 import java.util.Random;
 import java.util.Scanner;
 
