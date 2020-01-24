@@ -12,6 +12,7 @@ public class Ejercicio7 {
 
     public Ejercicio7(int maxPacientes){
         lector = new Scanner(System.in);
+
         int opcion;
 
         do{
