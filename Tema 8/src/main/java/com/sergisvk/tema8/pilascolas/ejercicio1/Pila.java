@@ -2,16 +2,18 @@ package com.sergisvk.tema8.pilascolas.ejercicio1;
 
 public class Pila {
 
-    private static final int INITIAL_SIZE = 10;
+    private int max_Array;
     private int[] datos;
     private int nElmentos;
 
-    public Pila(){
-        this(INITIAL_SIZE);
+    public Pila(int max_Array){
+        this.max_Array= max_Array;
+        datos = new int[max_Array];
+        nElmentos = 0;
     }
-
-    public Pila(int size){
-        datos = new int[size];
+    public Pila(){
+        this.max_Array =10;
+        datos = new int[max_Array];
         nElmentos = 0;
     }
 
@@ -26,6 +28,7 @@ public class Pila {
         int resultado = Integer.MIN_VALUE;
         if(!empyt()){
             resultado = datos[nElmentos - 1];
+            nElmentos --;
         }
         return resultado;
     }
@@ -34,8 +37,10 @@ public class Pila {
         int resultado = Integer.MIN_VALUE;
         if(!empyt()){
             resultado = datos[nElmentos - 1];
+            nElmentos --;
         }
         return resultado;
     }
+
 
 }
