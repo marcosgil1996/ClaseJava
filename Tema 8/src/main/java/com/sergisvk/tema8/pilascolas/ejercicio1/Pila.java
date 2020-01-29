@@ -1,5 +1,9 @@
 package com.sergisvk.tema8.pilascolas.ejercicio1;
 
+//El primero en entrar es el último en salir
+
+import java.util.Arrays;
+
 public class Pila {
 
     private int max_Array;
@@ -22,11 +26,11 @@ public class Pila {
     }
 
     public boolean empyt(){
-        return nElmentos != 0;
+        return nElmentos == 0;
     }
     public int pop(){
         int resultado = Integer.MIN_VALUE;
-        if(!empyt()){
+        if(empyt()){
             resultado = datos[nElmentos - 1];
             nElmentos --;
         }
@@ -35,12 +39,19 @@ public class Pila {
 
     public int top(){
         int resultado = Integer.MIN_VALUE;
-        if(!empyt()){
+        if(empyt()){
             resultado = datos[nElmentos - 1];
             nElmentos --;
         }
         return resultado;
     }
 
-
+    @Override
+    public String toString() {
+        return "Pila{" +
+                "max_Array=" + max_Array +
+                ", datos=" + Arrays.toString(datos) +
+                ", nElmentos=" + nElmentos +
+                '}';
+    }
 }
