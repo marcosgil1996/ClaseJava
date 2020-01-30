@@ -24,10 +24,10 @@ public class Pila {
     public int size(){
         return nElmentos;
     }
-
     public boolean empyt(){
         return nElmentos == 0;
     }
+
     public int pop(){
         int resultado = Integer.MIN_VALUE;
         if(empyt()){
@@ -46,6 +46,12 @@ public class Pila {
         return resultado;
     }
 
+    public void push(String num){
+
+    }
+
+    public int
+
     @Override
     public String toString() {
         return "Pila{" +
@@ -53,5 +59,8 @@ public class Pila {
                 ", datos=" + Arrays.toString(datos) +
                 ", nElmentos=" + nElmentos +
                 '}';
+    }
+
+    public void push() {
     }
 }
