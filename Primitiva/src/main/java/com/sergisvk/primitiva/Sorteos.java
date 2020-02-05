@@ -26,7 +26,7 @@ public class Sorteos {
         this.tickets = tickets;
     }
 
-    public Ticket getTicket(){
+    public Tickets getTicket(){
         Ticket nuevo = new Ticket();
 
         nuevo.setIdSorteo(nIdentificador);

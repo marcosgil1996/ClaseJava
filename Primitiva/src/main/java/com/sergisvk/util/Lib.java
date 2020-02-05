@@ -48,13 +48,13 @@ public class Lib {
         // Instanciamos la clase Random
         Random random = new Random();
 
-        // Mientras queden numeros en el mazo (en la lista de numbers)
+        // Mientras queden numeros
         while (numbers.size()>1){
             // Elegimos un índice al azar, entre 0 y el número
             int randomIndex = random.nextInt(numbers.size());
 
             // Damos al jugador (sacamos el número por pantalla)
-            System.out.println("Not Repeated Random Number "+numbers.get(randomIndex));
+            System.out.println("No repitas numeros "+numbers.get(randomIndex));
 
             // Y eliminamos la carta del mazo (la borramos de la lista)
             numbers.remove(randomIndex);

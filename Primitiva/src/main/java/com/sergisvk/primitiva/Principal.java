@@ -24,7 +24,6 @@ public class Principal {
                 case 1:
                     System.out.println("Has seleccionado juego único");
 
-
                     break;
                 case 2:
                     System.out.println("Has seleccionado ¡jugar hasta ganar!");
@@ -125,12 +124,23 @@ public class Principal {
     }
 
     private void usuarioElige(){
-        System.out.println("Escribe un número entre [0-49], no repitas números");
+
 
     }
 
+
+
     private void Aleatorio(){
-        Lib.aleatrioSinRepetir();
+        int auxiliar;
+        int[] aux;
+        boolean valido =false;
+
+        for (int i = 0; i < 7 ; i++) {
+            do {
+                if ()
+
+            }while (!valido);
+        }
     }
 
 

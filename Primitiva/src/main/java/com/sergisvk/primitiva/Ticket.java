@@ -2,6 +2,7 @@ package com.sergisvk.primitiva;
 
 public class Ticket {
 
+    //Declaración de las variables principales
     private int idSorteo;
     private int serieNumero;
     private int reintegro;
@@ -23,14 +24,14 @@ public class Ticket {
         this.reintegro = reintegro;
     }
 
-
+    //Mostrar
     @Override
     public String toString() {
         return String.format("Sorteo: %d, S/N: %d, Primitiva: %s, Reintegro: %d",idSorteo, serieNumero,
                 super.toString(), reintegro);
     }
 
-
+    //Getters y Setters de idSorteo, serieNumero,reintegro
     public int getIdSorteo() {
         return idSorteo;
     }

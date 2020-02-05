@@ -1,6 +1,5 @@
 package com.sergisvk.primitiva;
 import com.sergisvk.util.Lib;
-
 import java.util.ArrayList;
 
 public class Bombo {
