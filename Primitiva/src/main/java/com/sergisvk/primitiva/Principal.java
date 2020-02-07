@@ -135,12 +135,6 @@ public class Principal {
         int[] aux;
         boolean valido =false;
 
-        for (int i = 0; i < 7 ; i++) {
-            do {
-                if ()
-
-            }while (!valido);
-        }
     }
 
 
