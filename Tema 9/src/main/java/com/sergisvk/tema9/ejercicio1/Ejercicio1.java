@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
 
-    private final int MAX_CAPACIDAD = 10;
     public Ejercicio1(){
 
         int[] a = leeNumeros();
@@ -14,6 +13,7 @@ public class Ejercicio1 {
 
     public int[] leeNumeros(){
         Scanner lector = new Scanner(System.in);
+        int MAX_CAPACIDAD = 10;
         int[] numeros = new int[MAX_CAPACIDAD];
         int contador = 0;
         boolean salir = false;
