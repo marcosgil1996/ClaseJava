@@ -1,4 +1,4 @@
-package Ejercicio7;
+package com.sergisvk.tema9.Ejercicio7;
 import java.util.Scanner;
 
 public class Ejercicio7 {
