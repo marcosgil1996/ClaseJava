@@ -1,6 +1,7 @@
 package com.sergisvk.tema9;
 
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Lib {
     public static Scanner lector = new Scanner(System.in);
@@ -10,9 +11,6 @@ public class Lib {
         System.out.flush();
     }
 
-    /**
-     *  Le da tiempo al usuario para poder leer o realizar las acciones necesarias
-     */
     public static void pausa() {
         System.out.println("Pulsa INTRO para continuar...");
         lector.nextLine();
@@ -38,50 +36,31 @@ public class Lib {
         return min + r.nextFloat() * (max - min);
     }
 
-    public static void aleatrioSinRepetir(){
-        // Metemos en una lista los números del 1 al 49.
-        List<Integer> numbers = new ArrayList<>(49);
-        for (int i=1;i<50;i++){
-            numbers.add(i);
-        }
-
-        // Instanciamos la clase Random
-        Random random = new Random();
-
-        // Mientras queden numeros
-        while (numbers.size()>1){
-            // Elegimos un índice al azar, entre 0 y el número
-            int randomIndex = random.nextInt(numbers.size());
-
-            // Damos al jugador (sacamos el número por pantalla)
-            System.out.println("No repitas numeros "+numbers.get(randomIndex));
-
-            // Y eliminamos la carta del mazo (la borramos de la lista)
-            numbers.remove(randomIndex);
-            // Conjunto de números ya usados
-            Set<Integer> alreadyUsedNumbers = new HashSet<>();
-
-            // Vamos a generar 10 números aleatorios sin repetición
-            while (alreadyUsedNumbers.size()<10) {
-
-                // Número aleatorio entre 0 y 40, excluido el 40.
-                int randomNumber = random.nextInt(40);
-
-                // Si no lo hemos usado ya, lo usamos y lo metemos en el conjunto de usados.
-                if (!alreadyUsedNumbers.contains(randomNumber)){
-                    System.out.println("Not Repeated Random Number "+randomNumber);
-                    alreadyUsedNumbers.add(randomNumber);
+    public static void ordenar(int[] vector) {
+        boolean hayCambios = true;
+        while(hayCambios) {
+            hayCambios = false;
+            for(int i = 0; i < vector.length - 1; i++) {
+                if(vector[i] > vector[i+1]) {
+                    intercambio(vector, i, i + 1);
+                    hayCambios = true;
                 }
             }
         }
     }
 
-    public static void esperar(int segundos){
-        try {
-            Thread.sleep(segundos * 1000);
-        } catch (Exception e) {
-            System.out.println(e);
+    public static int indexOf(int[] vector, int x) {
+        for(int i = 0; i < vector.length; i++) {
+            if(vector[i] == x) {
+                return i;
+            }
         }
+        return -1;
+    }
+
+    public static void intercambio(int[] vector, int i, int j) {
+        int aux = vector[i];
+        vector[i] = vector[j];
+        vector[j] = aux;
     }
 }
-

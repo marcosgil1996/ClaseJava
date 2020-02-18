@@ -72,10 +72,11 @@ public class Calculadora {
                     Lib.pausa();
                     break;
                 case 4:
-                    System.out.println("Hasta seleccionado jugar en ciclos de 10.000");
+                    System.out.println("");
+                    break;
                 case 5:
                     System.out.println("Jugar hasta obtener un premio de Categoría ESPECIAL");
-                    //En esta opción el jugar jugará hasta que obtenga un premio de categoría ESPECIAL
+                    break;
                 case 0:
                     System.out.println("¡Hasta pronto!");
                     Lib.limpiarPantalla();
