@@ -36,6 +36,23 @@ public class Ejercicio1 {
         }
         return nuevo;
     }
+    /*
+    public  ArrayList<Integer> toArrayLista(int[] array){
+         int posPar =0;
+         int posImpar = array.length -1;
+         ArrayList<Integer> listaArray = new ArrayList<Integer>(array.length);
+        for (int i = 0; i < 10 ; i++) {
+            if (array[i] % 2 == 0){
+                listaArray.add(posPar, array[i]);
+                posPar ++;
+            }else{
+                listaArray.add(posImpar, array[i]);
+                posImpar ++;
+            }
+        }
+    }
+
+     */
 }
 
 
