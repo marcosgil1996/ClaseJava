@@ -1,14 +1,16 @@
 package com.sergisvk.Ejercicio1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class Ejercicio1 {
 
+
      public Ejercicio1(){
          int[] numTotales = new int[10];
          int j = 0;
          numTotales[j]=(int)(aleatorio(0,50));
-         System.out.print("Array antes de organizarlo%s%n"+ Arrays.toString(numTotales));
+         System.out.print("Array antes de organizarlo"+ Arrays.toString(numTotales));
          numTotales = separaParesImpares(numTotales);
          System.out.println("Array depues de organizarlo en pares al princio y impares al final" + Arrays.toString(numTotales));
 
