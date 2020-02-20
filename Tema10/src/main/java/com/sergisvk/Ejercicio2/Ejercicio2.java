@@ -1,5 +1,6 @@
 package com.sergisvk.Ejercicio2;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Ejercicio2  implements IEstadisticas {
     private int NUM_ARRAY = 20;
@@ -74,10 +75,18 @@ public class Ejercicio2  implements IEstadisticas {
         return sumatorio()/array.size();
     }
 
+    /**
+     *
+     * @return devolverá el número más repetido
+     */
     @Override
     public double moda() {
-        int contador = 0; //contador a 0
+        HashMap<Double,Integer>nuevoHasMap = new HashMap<>();
+        double contadorKey = 0;
+        int contadorValue = Integer.MIN_VALUE;
+        for (int i = 0; i <array.size() ; i++) {
 
+        }
 
 
     }
