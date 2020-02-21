@@ -2,7 +2,7 @@ package com.sergisvk.Ejercicio2;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Ejercicio2  implements IEstadisticas {
+public class Ejercicio2 implements IEstadisticas {
     private int NUM_ARRAY = 20;
     private ArrayList<Double> array = new ArrayList<>(NUM_ARRAY);
 
@@ -84,10 +84,19 @@ public class Ejercicio2  implements IEstadisticas {
         HashMap<Double,Integer>nuevoHasMap = new HashMap<>();
         double contadorKey = 0;
         int contadorValue = Integer.MIN_VALUE;
-        for (int i = 0; i <array.size() ; i++) {
 
+        for (Double aDouble : array) {
+            if (nuevoHasMap.containsKey(aDouble)) {
+                nuevoHasMap.replace(aDouble, nuevoHasMap.get(aDouble), (nuevoHasMap.get(aDouble) + 1));
+            } else {
+                nuevoHasMap.put(aDouble, 1);
+            }
+
+            if (nuevoHasMap.get(aDouble) > contadorValue) {
+                contadorValue = nuevoHasMap.get(aDouble);
+                contadorKey = aDouble;
+            }
         }
-
-
+        return contadorKey;
     }
 }
