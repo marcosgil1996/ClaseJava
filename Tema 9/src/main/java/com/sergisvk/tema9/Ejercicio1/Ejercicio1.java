@@ -1,4 +1,4 @@
-package com.sergisvk.tema9.ejercicio1;
+package com.sergisvk.tema9.Ejercicio1;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;

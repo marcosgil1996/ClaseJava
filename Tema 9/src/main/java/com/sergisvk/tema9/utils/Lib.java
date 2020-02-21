@@ -1,4 +1,4 @@
-package com.sergisvk.tema9;
+package com.sergisvk.tema9.utils;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,119 +1,247 @@
 package com.sergisvk.tema9.Ejercicio10;
-import com.sergisvk.tema9.Lib;
-import java.util.Scanner;
+import com.sergisvk.tema9.utils.Lib;
+import com.sergisvk.tema9.utils.Log;
+
+import java.util.Random;
 
 public class Calculadora {
-
-    private Scanner lector; //Se declara el lector
-
-    public Calculadora(){
-
-        lector = new Scanner(System.in); //Hacemos la llamada al Lector para poder recibir datos por pantalla
-
-        System.out.println("Bienvenido a la calculadora, espere unos segundos mientras se carga. . .");
-        Lib.esperar(3); // Esperamos a iniciar el programa (congela el programa)
-        int opcion;
-        double num1,num2; //declaraciones de los dos números
-        double resultado = 0;
+    public static final boolean DEBUG = true;
+    public Calculadora() {
+        int opcion = 0;
+        float operando1 = 0;
+        float operando2 = 0;
+        float resultado = 0;
+        int operando1Resto = 0;
+        int operando2Resto = 0;
+        int resultadoResto = 0;
+        boolean validado = false;
 
         do {
-            opcion = menuPrincipal();
-            switch (opcion){
+            do {
+                System.out.println("**************************");
+                System.out.println("*** CALCULADORA BÁSICA ***");
+                System.out.println("**************************");
+                System.out.println("1. Suma");
+                System.out.println("2. Resta");
+                System.out.println("3. Multiplicación");
+                System.out.println("4. División");
+                System.out.println("5. Resto división");
+                System.out.println("------------------");
+                System.out.println("0. Salir");
+                System.out.print("\nElija una opción: ");
+                try {
+                    opcion = Integer.parseInt(opcionAleatoria(1, 7, 0.05f));
+                    validado = true;
+                } catch (NumberFormatException nfe) {
+                    Log.e("Debe introducir un número entre 0 y 5");
+                    validado = false;
+                }
+            } while (!validado);
+            switch(opcion) {
+                //Suma
                 case 1:
-                    try {
-                        System.out.println("Has seleccionado suma \n Inserte el primer número: ");
-                        num1 = lector.nextDouble();
-                        lector.nextLine();
-                        System.out.println("Inserte el segundo número: ");
-                        num2 = lector.nextDouble();
-                        lector.nextLine();
-                        resultado = num1 + num2;
-                    }catch (NumberFormatException a){
-                        System.out.println("Debes de introducir un número");
-                        Lib.pausa();
+                    System.out.println("\n************ SUMA ************");
+                    do {
+                        System.out.print("Introduzca el primer operando: ");
+                        try {
+                            operando1 = Float.parseFloat(opcionAleatoria(0, 20, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    do {
+                        System.out.print("\nIntroduzca el segundo operando: ");
+                        try {
+                            operando2 = Float.parseFloat(opcionAleatoria(0, 20, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    resultado = operando1 + operando2;
+                    System.out.println("\n" + operando1 + " + " + operando2 + " = " + resultado);
+                    System.out.println("\nPulse INTRO para continuar ...");
+                    if(!DEBUG) {
+                        Lib.lector.nextLine();
                     }
-                    System.out.println("El resultado es "+ resultado);
-                    resultado = 0;
-                    Lib.pausa();
-
                     break;
+                //Resta
                 case 2:
-                    try {
-                        System.out.println();
-                        System.out.println("Has seleccionado resta \n Inserte el primer número: ");
-                        num1 = lector.nextDouble();
-                        lector.nextLine();
-                        System.out.println("Inserte el segundo número: ");
-                        num2 = lector.nextDouble();
-                        lector.nextLine();
-                        resultado = num1 - num2;
-                    }catch (NumberFormatException b){
-                        System.out.println("Debees de introducir un número");
+                    System.out.println("\n************ RESTA ************");
+                    do {
+                        System.out.print("Introduzca el primer operando: ");
+                        try {
+                            operando1 = Float.parseFloat(opcionAleatoria(0, 20, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    do {
+                        System.out.print("\nIntroduzca el segundo operando: ");
+                        try {
+                            operando2 = Float.parseFloat(opcionAleatoria(0, 20, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    resultado = operando1 - operando2;
+                    System.out.println("\n" + operando1 + " - " + operando2 + " = " + resultado);
+                    System.out.println("\nPulse INTRO para continuar ...");
+                    if(!DEBUG) {
+                        Lib.lector.nextLine();
                     }
-                    System.out.println("El resultado es "+ resultado);
-                    resultado = 0;
-                    Lib.pausa();
                     break;
+                //Multiplicación
                 case 3:
-                    try {
-                        System.out.println();
-                        System.out.println("Has seleccionado multiplicación \n Inserte el primer número: ");
-                        num1 = lector.nextDouble();
-                        lector.nextLine();
-                        System.out.println("Inserte el segundo número: ");
-                        num2 = lector.nextDouble();
-                        lector.nextLine();
-                        resultado = num1 * num2;
-                    }catch (NumberFormatException b){
-                        System.out.println("Debees de introducir un número");
+                    System.out.println("\n******** MULTIPLICACIÓN *********");
+                    do {
+                        System.out.print("Introduzca el primer operando: ");
+                        try {
+                            operando1 = Float.parseFloat(opcionAleatoria(0, 20, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    do {
+                        System.out.print("\nIntroduzca el segundo operando: ");
+                        try {
+                            operando2 = Float.parseFloat(opcionAleatoria(0, 20, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    resultado = operando1 * operando2;
+                    System.out.println("\n" + operando1 + " x " + operando2 + " = " + resultado);
+                    System.out.println("\nPulse INTRO para continuar ...");
+                    if(!DEBUG) {
+                        Lib.lector.nextLine();
                     }
-                    System.out.println("El resultado es "+ resultado);
-                    resultado = 0;
-                    Lib.pausa();
                     break;
+                //División
                 case 4:
-                    System.out.println("");
+                    System.out.println("\n********** DIVISIÓN ***********");
+                    do {
+                        System.out.print("Introduzca el primer operando: ");
+                        try {
+                            operando1 = Float.parseFloat(opcionAleatoria(0, 5, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    do {
+                        System.out.print("\nIntroduzca el segundo operando: ");
+                        try {
+                            operando2 = Float.parseFloat(opcionAleatoria(0, 3, 0.05f));
+                            if(operando2 != 0) {
+                                validado = true;
+                            } else {
+                                validado = false;
+                                Log.e("El divisor no puede ser 0");
+                            }
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Sólo números por favor");
+                        }
+                    } while (!validado);
+                    resultado = operando1 / operando2;
+                    System.out.println("\n" + operando1 + " / " + operando2 + " = " + resultado);
+                    System.out.println("\nPulse INTRO para continuar ...");
+                    if(!DEBUG) {
+                        Lib.lector.nextLine();
+                    }
                     break;
+                //Resto división
                 case 5:
-                    System.out.println("Jugar hasta obtener un premio de Categoría ESPECIAL");
+                    System.out.println("\n******** RESTO DIVISIÓN ********");
+                    do {
+                        System.out.print("Introduzca el primer operando: ");
+                        try {
+                            operando1Resto = Integer.parseInt(opcionAleatoria(0, 5, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Solo números por favor");
+                        }
+                    } while (!validado);
+                    do {
+                        System.out.print("\nIntroduzca el segundo operando: ");
+                        try {
+                            operando2Resto = Integer.parseInt(opcionAleatoria(0, 3, 0.05f));
+                            validado = true;
+                        } catch (NumberFormatException nfe) {
+                            validado = false;
+                            Log.e("Solo números por favor");
+                        }
+                    } while (!validado);
+                    try {
+                        resultadoResto = operando1Resto % operando2Resto;
+                        System.out.println("\n" + operando1Resto + " % " + operando2Resto + " = " + resultadoResto);
+                    } catch (ArithmeticException ae) {
+                        Log.e("El segundo operando no puede ser 0");
+                    }
+
+                    System.out.println("\nPulse INTRO para continuar ...");
+                    if(!DEBUG) {
+                        Lib.lector.nextLine();
+                    }
                     break;
+                //Ponemos la opción 0 para que el no se tome como default
+                //pero en realidad no hace nada.
                 case 0:
-                    System.out.println("¡Hasta pronto!");
-                    Lib.limpiarPantalla();
-                    // Cierre del programa
+                    break;
+                default:
+                    System.out.println("\nXXXXXXXXXXXXXXXXXX ERROR XXXXXXXXXXXXXXXXXXXXXXXX");
+                    System.out.println(opcion + " no es una opción válida del menú");
+                    System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n");
+                    System.out.println("Pulse INTRO para continuar ...");
+                    if(!DEBUG) {
+                        Lib.lector.nextLine();
+                    }
                     break;
             }
-        }while (opcion !=0);
-        Lib.limpiarPantalla();
-        lector.close();
+
+        } while (opcion != 0);
+        System.out.println("Hasta pronto");
     }
 
 
-    /*
-    Menú de elección, devuelve un número con la opción elegida por el usuario
-    */
-    private  int menuPrincipal(){
-        int opcion = -1;
-        do{
-            System.out.println("CALCULADORA TERMINAL");
-            System.out.println("- - - - - - - - - - - - ");
-            System.out.println("ELIGE UNA OPCIÓN");
-            System.out.println(" 1. SUMAR \n 2. RESTAR \n 3. MULTIPLICAR \n 4. DIVIDIR \n 5. RESTO DIVISIÓN");
-            System.out.println("- - - - - - - - - - - - ");
-            System.out.println("0. SALIR");
-            opcion = Integer.parseInt(lector.nextLine());
-            if(opcion < 0 || opcion >5){
-                System.out.println("Elija una opcion del menú de [0-5]");
-                Lib.pausa();
+
+    public String opcionAleatoria(int min, int max, float probabilidadLetra) {
+        String result;
+        if(DEBUG) {
+            int aleatorio = Lib.aleatorio(min, max);
+            String[] v = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+            Random r = new Random();
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        }while (opcion != 0);
-        return opcion;
+            float sorteoLetra = r.nextFloat();
+            if (sorteoLetra < probabilidadLetra) {
+                result = v[Lib.aleatorio(0, v.length - 1)];
+                System.out.println(result);
+                return result;
+            } else {
+                result = String.valueOf(aleatorio);
+                System.out.println(result);
+                return result;
+            }
+        } else {
+            return Lib.lector.nextLine();
+        }
     }
-
-
-
-
-
-
-
 }
