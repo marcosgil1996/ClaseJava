@@ -1,41 +1,38 @@
 package com.sergisvk.Ejercicio3;
 import java.util.ArrayList;
 
-public abstract class Pila <P> implements IPila<String> {
-    private ArrayList<P>arrayList;
+public class Pila <T> implements IPila<T> {
+    private ArrayList<T> lista;
 
     public Pila(){
-        arrayList = new ArrayList<>();
+        lista = new ArrayList<>();
     }
     public Pila(int numero){
-        arrayList = new ArrayList<>(numero);
+        lista = new ArrayList<>(numero);
     }
 
     @Override
-    public String push(String e) {
-        arrayList.add((P) e);
+    public T push(T e) {
+        lista.add(e);
         return e;
     }
 
     @Override
-    public String pop(String P) {
-        P cadena = arrayList.get(arrayList.size()-1);
-        arrayList.remove(arrayList.size()-1);
-        return (String) cadena;
+    public T pop() {
+
     }
 
     @Override
     public int size() {
-        return arrayList.size();
+        return lista.size();
     }
 
     @Override
-    public String top() {
-        return (String) arrayList.get(arrayList.size()-1);
+    public T top() {
+        return lista.get(T);
     }
-
     @Override
     public boolean isEmpty() {
-        return arrayList.isEmpty();
+        return lista.isEmpty();
     }
 }
