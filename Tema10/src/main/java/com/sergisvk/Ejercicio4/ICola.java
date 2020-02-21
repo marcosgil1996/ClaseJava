@@ -1,7 +1,7 @@
 package com.sergisvk.Ejercicio4;
 
 public interface ICola<T> {
-    boolean add(String e);
+    boolean add(T e);
     T remove();
     int size();
     T peek();
