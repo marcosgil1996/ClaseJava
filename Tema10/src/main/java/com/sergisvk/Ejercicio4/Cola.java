@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class Cola<T> implements ICola<T>{
 
     private ArrayList<T>cola;
-    private
 
     public Cola(){
         cola = new ArrayList<>();
     }
 
+    @Override
     public String toString(){
         return cola.toString();
     }
