@@ -53,7 +53,7 @@ public class CentroSalud {
         System.out.printf(" Edad: %d Sexo: %s\n", pacientes.get(menorMayor()[0]).getEdad(), pacientes.get(menorMayor()[0]).getSexo());
         System.out.printf("%d Sexo: %s\n", pacientes.get(menorMayor()[1]).getEdad(), pacientes.get(menorMayor()[1]).getSexo());
         System.out.print("\n");
-        System.out.println("**** MAYORES DE EDAD");
+        System.out.println("**** MAYORES DE EDAD ***");
         System.out.print("Cantidad de pacientes por sexo:\n");
         System.out.printf("Hombres: %d\tMujeres: %d", porSexo()[0], porSexo()[1]);
         System.out.print("\n");

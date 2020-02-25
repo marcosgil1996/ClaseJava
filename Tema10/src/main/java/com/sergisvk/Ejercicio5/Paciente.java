@@ -4,7 +4,7 @@ import java.util.GregorianCalendar;
 public class Paciente {
 
     //Privadas
-    private static int idAuto = 0;
+    private static int idAuto = 1;
     private int id;
     private String nombre;
     private GregorianCalendar fechaNacimiento;
@@ -16,13 +16,13 @@ public class Paciente {
      *
      * @param nombre de usuario
      * @param sexo M y H
-     * @param altura
+     * @param altura en metros
      * @param peso Kg
      */
-    public Paciente(String nombre, GregorianCalendar fechaNac, char sexo, float altura, float peso) {
+    public Paciente(String nombre, GregorianCalendar fechaNacimiento, char sexo, float altura, float peso) {
         this.id = idAuto++;
         this.nombre = nombre;
-        this.fechaNacimiento = fechaNac;
+        this.fechaNacimiento = fechaNacimiento;
         this.sexo = sexo;
         this.altura = altura;
         this.peso = peso;
@@ -38,7 +38,7 @@ public class Paciente {
 
     /**
      *la edad del usuario, La fecha actual en milisegundos será restado en con al fecha de nacimiento en millisegudos
-     * @return
+     * @return la fecha en milisegundos
      */
     public int getEdad(){
         GregorianCalendar fechaActual = new GregorianCalendar();
@@ -46,6 +46,10 @@ public class Paciente {
         return (int)(((((difMillisegundos /1000)/60)/60)/24)/365.25);
     }
 
+    /**
+     * Según el peso asignará un tipo de respuesta
+     * @return el dato según la tabla
+     */
     public String getIMCMessage(){
         float imc = getIMC();
         if(imc < 18.5){
@@ -85,4 +89,5 @@ public class Paciente {
     public float getPeso() {
         return peso;
     }
+
 }
