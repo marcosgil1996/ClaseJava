@@ -1,5 +1,9 @@
 package com.sergisvk.Ejercicio10;
 import com.sergisvk.util.Lib;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
@@ -72,28 +76,67 @@ public class Ejercicio10 {
         String dni;
         String nombre;
         String apellidos;
+        String fechaNacString;
         GregorianCalendar fechaNac = new GregorianCalendar();
-        float sueldo;
+        float sueldo = 0;
         boolean haveHijo;
         char aux;
         int numHijos;
+        boolean valido = false;
+
         System.out.println("== NUEVO EMPLEADO ==");
         System.out.println("DNI: ");
         dni = lector.nextLine();
+        valido = dni.length() < 16;
+        if (!valido){
+            System.out.println("El DNI es demas");
+        }
         if (empresa.isEmpleado(dni)) {
             System.out.println("El empleado ya esta registrado");
         } else {
-            System.out.print("Nombre: ");
-            nombre = lector.nextLine();
-            System.out.print("Apellidos: ");
-            apellidos = lector.nextLine();
-            System.out.print("Sueldo: ");
-            sueldo = lector.nextFloat();
-            lector.nextLine();
-            System.out.println("Cuando nacistes?");
+            do{
+                System.out.println("Nombre: ");
+                nombre = lector.nextLine();
+                valido = nombre.length()>2;
+                if(!valido){
+                    System.out.println("Nombre debe tener almenos 2 caracteres");
+                    Lib.pausa();
+                }
+            }while (!valido);
+            do{
+                System.out.println("Apellidos: ");
+                apellidos = lector.nextLine();
+                valido = apellidos.length()>2;
+                if(!valido){
+                    System.out.println("El apellido debe  de tener al menos 2 caracteres");
+                    Lib.pausa();
+                }
+            }while (!valido);
+
+            try {
+                System.out.println("Sueldo: ");
+                sueldo = lector.nextFloat();
+                lector.nextLine();
+            }catch (NumberFormatException e){
+                System.out.println("No intruzcas simbolos ni letras, solo el sueldo. Ejemplo: 2000");
+            }
+            do {
+                System.out.println("Fecha nacimiento (dd-mm-yyyy): ");
+                fechaNacString = lector.nextLine();
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                try {
+                    Date date = sdf.parse(fechaNacString);
+                    fechaNac = new GregorianCalendar();
+                    fechaNac.setTime(date);
+                }catch (ParseException pe){
+                    valido = false;
+                    System.out.println("El formato de la fecha no es valido");
+                    Lib.pausa();
+                }
+            }while (!valido);
 
             do {
-                System.out.print("Tienes hijos?: ");
+                System.out.println("Tienes hijos?: ");
                 aux = lector.nextLine().charAt(0);
             } while (aux != 'S' && aux != 's' && aux != 'n' && aux != 'N');
             haveHijo = aux == 'S' || aux == 's';
@@ -119,7 +162,7 @@ public class Ejercicio10 {
         int numHijos;
         System.out.println("NUEVO HIJO");
         System.out.println(" ");
-        System.out.print("DNI: ");
+        System.out.println("DNI: ");
         dni = lector.nextLine();
         if (empresa.isEmpleado(dni)) {
             System.out.println("Cuantos hijos quieres añadir?: ");
@@ -156,7 +199,7 @@ public class Ejercicio10 {
         String dni;
         System.out.println("BORRAR EMPLEADO");
         System.out.println(" ");
-        System.out.print("DNI: ");
+        System.out.println("DNI: ");
         dni = lector.nextLine();
         if (empresa.isEmpleado(dni)) {
             empresa.removeEmpleado(dni);
