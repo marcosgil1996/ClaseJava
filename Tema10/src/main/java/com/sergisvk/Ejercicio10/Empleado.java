@@ -1,6 +1,9 @@
 package com.sergisvk.Ejercicio10;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
@@ -33,13 +36,22 @@ public class Empleado {
         this.arrayListHijos = new ArrayList<>();
     }
 
+    /**
+     * Contructor vacio
+     * @param dni DNI
+     * @param nombre del empleado
+     * @param apellidos del empleado
+     * @param fechaNacimiento del empleado
+     * @param sueldo del empleado de la empresq
+     * @param tieneHijos cantidad de hijos del empleado
+     */
     public Empleado(GregorianCalendar dni, String nombre, String apellidos, String fechaNacimiento, float sueldo, boolean tieneHijos) {
     }
 
     /**
      * El setHijo añade al empleado si tiene un hijo además de guardarlo
      * @param numHijo cuantos hijos tiene el empleado
-     * @return true sí tiene un hijo además de añadirlo y su no tiene devuelve false
+     * @return true sí tiene un hijo además de añadirlo y si no tiene devuelve false
      */
     public boolean setHijo(int numHijo){
         String nombre;
@@ -73,7 +85,26 @@ public class Empleado {
         return false;
     }
 
+    /*
+     * Getters y Setters del emplado.
+     */
 
+    /**
+     *
+     * @return la edad del empleado
+     */
+    public int getEdad(){
+        LocalDate hoy = LocalDate.now();
+        LocalDate cumple;
+        Period p;
+        int anyo = fechaNacimiento.get(Calendar.YEAR);
+        int mes = fechaNacimiento.get(Calendar.MONTH)+1;
+        int dia = fechaNacimiento.get(Calendar.DAY_OF_MONTH);
+
+        cumple = LocalDate.of(anyo,mes,dia);
+        p= Period.between(cumple, hoy);
+        return p.getDays();
+    }
 
     public String getNombre() {
         return nombre;

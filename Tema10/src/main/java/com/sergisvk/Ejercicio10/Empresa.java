@@ -4,26 +4,39 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 public class Empresa {
-
     private ArrayList<Empleado> empleados;
 
-    public Empresa(int numEmpleados) {
-        this.empleados = new ArrayList<>(numEmpleados);
+    public Empresa(int numeroEmpleados) {
+        this.empleados = new ArrayList<>(numeroEmpleados);
     }
-    public Empresa(){
-        this.empleados =new ArrayList<>();
+    public Empresa() {
+        this.empleados = new ArrayList<>();
     }
 
-    public boolean addEmpleado(String nombre, String apellidos, String fechaNacimiento, GregorianCalendar dni, float sueldo, boolean tieneHijos){
-        if (isEmpleado(dni)){
-          return false;
-        }else {
-            empleados.add(new Empleado(dni,nombre,apellidos,fechaNacimiento,sueldo,tieneHijos));
+    /**
+     * Permite añadir un nuevo empleado a la empresa
+     * @param dni
+     * @param nombre
+     * @param apellidos
+     * @param fechaNac
+     * @param sueldo
+     * @param haveHijo
+     * @return
+     */
+    public boolean addEmpleado(String dni, String nombre, String apellidos, GregorianCalendar fechaNac, float sueldo, boolean haveHijo){
+        if(isEmpleado(dni)){
+            return false;
+        } else {
+            empleados.add(new Empleado(dni, nombre, apellidos, fechaNac, sueldo, haveHijo));
             return true;
         }
     }
 
-
+    /**
+     * Permite eliminar un empleado d
+     * @param dni
+     * @return
+     */
     public boolean removeEmpleado(String dni){
         if(isEmpleado(dni)){
             empleados.remove(buscarEmpleado(dni));
@@ -63,5 +76,4 @@ public class Empresa {
         }
         return false;
     }
-
 }
