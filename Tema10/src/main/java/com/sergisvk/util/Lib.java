@@ -25,7 +25,7 @@ public class Lib {
 
     public static int aleatorio(int min, int max) {
         Random r = new Random();
-        return r.nextInt(max - min +1 ) + min;
+        return r.nextInt(max - min + 1 ) + min;
     }
 
     public static double aleatorio(double min, double max) {

@@ -1,15 +1,19 @@
 package com.sergisvk.Ejercicio10;
-import com.sergisvk.util.Lib;
 
+import com.sergisvk.util.Lib;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio10 {
     private Scanner lector = new Scanner(System.in);
     private Empresa empresa = new Empresa();
+
+    private String[] nombre = {"Juan", "Isabel", "Pablo", "Sergio", "Rubén", "Alicia", "Ana", "María", "José", "Fernando", "Germán"};
+    private String[] apellidos = {"Fernández", "Gutiérrez", "Ramírez", "Torregrosa", "Signes", "García", "Gallego", "Alonso", "Tormos"};
 
     public Ejercicio10() {
         int opcionMenu;
@@ -88,38 +92,43 @@ public class Ejercicio10 {
         System.out.println("DNI: ");
         dni = lector.nextLine();
         valido = dni.length() < 16;
-        if (!valido){
-            System.out.println("El DNI es demas");
+        if (!valido) {
+            System.out.println("El DNI es demasido largo");
         }
         if (empresa.isEmpleado(dni)) {
             System.out.println("El empleado ya esta registrado");
         } else {
-            do{
+            do {
                 System.out.println("Nombre: ");
                 nombre = lector.nextLine();
-                valido = nombre.length()>2;
-                if(!valido){
+                valido = nombre.length() > 2;
+                if (!valido) {
                     System.out.println("Nombre debe tener almenos 2 caracteres");
                     Lib.pausa();
                 }
-            }while (!valido);
-            do{
+            } while (!valido);
+            do {
                 System.out.println("Apellidos: ");
                 apellidos = lector.nextLine();
-                valido = apellidos.length()>2;
-                if(!valido){
+                valido = apellidos.length() > 1;
+                if (!valido) {
                     System.out.println("El apellido debe  de tener al menos 2 caracteres");
+                    Lib.pausa();
+                }
+            } while (!valido);
+
+            do{
+                System.out.println("Sueldo: ");
+                try {
+                    sueldo = lector.nextFloat();
+                    lector.nextLine();
+                } catch (InputMismatchException e) {
+                    valido = false;
+                    System.out.println("Introduce el suelo de forma numérica");
                     Lib.pausa();
                 }
             }while (!valido);
 
-            try {
-                System.out.println("Sueldo: ");
-                sueldo = lector.nextFloat();
-                lector.nextLine();
-            }catch (NumberFormatException e){
-                System.out.println("No intruzcas simbolos ni letras, solo el sueldo. Ejemplo: 2000");
-            }
             do {
                 System.out.println("Fecha nacimiento (dd-mm-yyyy): ");
                 fechaNacString = lector.nextLine();
@@ -128,19 +137,21 @@ public class Ejercicio10 {
                     Date date = sdf.parse(fechaNacString);
                     fechaNac = new GregorianCalendar();
                     fechaNac.setTime(date);
-                }catch (ParseException pe){
+                } catch (ParseException pe) {
                     valido = false;
                     System.out.println("El formato de la fecha no es valido");
                     Lib.pausa();
                 }
-            }while (!valido);
+            } while (!valido);
 
             do {
                 System.out.println("Tienes hijos?: ");
                 aux = lector.nextLine().charAt(0);
+
             } while (aux != 'S' && aux != 's' && aux != 'n' && aux != 'N');
+
             haveHijo = aux == 'S' || aux == 's';
-            if (haveHijo) {
+            if(haveHijo) {
                 System.out.println("Cuantos hijos tienes?: ");
                 numHijos = lector.nextInt();
                 lector.nextLine();
@@ -179,15 +190,19 @@ public class Ejercicio10 {
      */
     public void op3() {
         String dni;
-        float sueldo;
+        float sueldo = 0;
         System.out.println("MODIFICAR SUELDO");
         System.out.println(" ");
         System.out.print("DNI: ");
         dni = lector.nextLine();
-
         if (empresa.isEmpleado(dni)) {
-            System.out.print("Cual es el nuevo sueldo?: ");
-            sueldo = lector.nextFloat();
+            try {
+                System.out.print("Cual es el nuevo sueldo?: ");
+                sueldo = lector.nextFloat();
+            }catch (InputMismatchException a){
+                System.out.println("Introduce el suelo de forma numérica");
+                Lib.pausa();
+            }
             empresa.modificarSueldo(dni, sueldo);
             System.out.println("Sueldo modificado con exito!");
         } else {
@@ -230,7 +245,7 @@ public class Ejercicio10 {
         }
     }
 
-    private void consultas(){
+    private void consultas() {
         int opcion;
         int i;
         do {
@@ -240,7 +255,7 @@ public class Ejercicio10 {
                     System.out.println("Hasta la proxima!");
                     break;
                 case 1:
-                    //Busqueda por NIF
+                    busquedaPorNIF();
                     break;
                 case 2:
                     //Busqueda por num
@@ -278,4 +293,9 @@ public class Ejercicio10 {
         return opcion;
 
     }
+
+    private void busquedaPorNIF() {
+
+    }
+
 }
