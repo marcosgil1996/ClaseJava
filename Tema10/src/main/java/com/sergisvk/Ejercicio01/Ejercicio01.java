@@ -1,12 +1,11 @@
-package com.sergisvk.Ejercicio1;
-import java.util.ArrayList;
+package com.sergisvk.Ejercicio01;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Ejercicio1 {
+public class Ejercicio01 {
 
 
-     public Ejercicio1(){
+     public Ejercicio01(){
          int[] numTotales = new int[10];
          int j = 0;
          numTotales[j]=(int)(aleatorio(0,50));
