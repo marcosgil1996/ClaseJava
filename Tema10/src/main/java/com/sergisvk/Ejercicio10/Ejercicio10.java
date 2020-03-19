@@ -1,5 +1,5 @@
 package com.sergisvk.Ejercicio10;
-
+import com.sergisvk.Ejercicio10.Busquedas;
 import com.sergisvk.util.Lib;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -246,6 +246,7 @@ public class Ejercicio10 {
     }
 
     private void consultas() {
+        Busquedas busca = new Busquedas();
         int opcion;
         int i;
         do {
@@ -255,13 +256,13 @@ public class Ejercicio10 {
                     System.out.println("Hasta la proxima!");
                     break;
                 case 1:
-                    busquedaPorNIF();
+                    System.out.println(busca.buscarPorNif("5432654-D"));
                     break;
                 case 2:
-                    //Busqueda por num
+                    //Busqueda por num. No entiendo
                     break;
                 case 3:
-                    //Busqueda por rango edad
+                    System.out.println(busca.buscarRangoEdad(30,18));
                     break;
                 case 4:
                     //Busqueda por sueldo
@@ -294,8 +295,5 @@ public class Ejercicio10 {
 
     }
 
-    private void busquedaPorNIF() {
-
-    }
 
 }
